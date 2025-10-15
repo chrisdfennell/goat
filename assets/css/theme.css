@@ -1,0 +1,17 @@
+/* === Moved from original <style> blocks === */
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+.hero-bg {
+    background-image: url('https://placehold.co/1200x600/a7f3d0/1e293b?text=Welcome+Goat+Keepers!');
+    background-size: cover;
+    background-position: center;
+}
+/* Dark/Light variables (opt-in if you want) */
+:root {
+    color-scheme: light dark;
+}
+html[data-theme="dark"] .dark\:invert {
+    filter: invert(1) hue-rotate(180deg);
+}
