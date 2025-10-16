@@ -1,74 +1,59 @@
 <?php
-$PAGE_TITLE = 'Goat Care: Complete Beginner’s Guide';
-$PAGE_SCRIPTS = ['https://cdn.tailwindcss.com'];
-$PAGE_INLINE_JS = <<<HTML
-<script>
+// This is the front controller. All "pretty URL" requests are routed through here.
 
-</script>
-HTML;
+require_once __DIR__ . '/includes/bootstrap.php';
 
+// --- Basic Router ---
+$requestUri = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
+
+// Handle requests for index.php gracefully
+if ($requestUri === 'index.php' || $requestUri === 'index') {
+    $requestUri = '';
+}
+
+// Define the mapping of pretty URLs to actual file paths.
+$routes = [
+    '' => 'home.php', // Handle the homepage
+    'getting-started' => 'pages/01-getting-started.php',
+    'housing-fencing' => 'pages/02-housing-fencing.php',
+    'breeds' => 'pages/03-breeds.php',
+    'nutrition-minerals' => 'pages/04-nutrition-minerals.php',
+    'health-vaccines-parasites' => 'pages/05-health-vaccines-parasites.php',
+    'hoof-care-grooming' => 'pages/06-hoof-care-grooming.php',
+    'breeding-kidding' => 'pages/07-breeding-kidding.php',
+    'bottle-feeding-kid-care' => 'pages/08-bottle-feeding-kid-care.php',
+    'security-predator-proofing' => 'pages/09-security-predator-proofing.php',
+    'behavior-training-enrichment' => 'pages/10-behavior-training-enrichment.php',
+    'seasonal-care' => 'pages/11-seasonal-care.php',
+    'checklists' => 'pages/12-checklists.php',
+    'recordkeeping-forms' => 'pages/13-recordkeeping-forms.php',
+    'common-problems-triage' => 'pages/14-common-problems-triage.php',
+    'glossary-resources' => 'pages/15-glossary-resources.php',
+    'calculators' => 'pages/16-calculators.php',
+    'barn-pack' => 'pages/17-barn-pack.php',
+];
+
+// Check if the requested page exists in our routes.
+if (array_key_exists($requestUri, $routes)) {
+    $filePath = __DIR__ . '/' . $routes[$requestUri];
+    
+    // Final security check to ensure the file actually exists before including.
+    if (file_exists($filePath)) {
+        include $filePath;
+        exit;
+    }
+}
+
+// If no route was matched, or the file doesn't exist, show a 404 error.
+http_response_code(404);
+$PAGE_TITLE = '404 Not Found';
 include __DIR__ . '/includes/header.php';
 ?>
-
-<!-- Main Content -->
-<main>
-    <!-- Hero Section -->
-    <section class="hero-bg text-white">
-        <div class="bg-black bg-opacity-50">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32 text-center">
-                <h1 class="text-4xl sm:text-6xl font-bold tracking-tight">A Practical Guide to Raising Healthy Goats</h1>
-                <p class="mt-6 text-lg sm:text-xl max-w-3xl mx-auto">From setup and breed selection to nutrition, health, and kidding—find clear, actionable advice for your herd.</p>
-                <a class="mt-8 inline-block bg-emerald-600 text-white font-medium py-3 px-8 rounded-md hover:bg-emerald-700 transition-colors" href="pages/01-getting-started.php">Start Your Journey →</a>
-            </div>
-        </div>
-    </section>
-    <!-- Topics Section -->
-    <section class="py-16 sm:py-24 bg-slate-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Explore the Guide</h2>
-                <p class="mt-4 text-lg text-slate-600">All the essentials, organized by topic.</p>
-            </div>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Card: Getting Started -->
-                <a class="block bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-slate-200" href="pages/01-getting-started.php">
-                    <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Start Here</span>
-                    <h3 class="text-xl font-bold text-slate-900">Getting Started</h3>
-                    <p class="mt-2 text-slate-600">Plan your space, budget, and first-week checklist for a successful start.</p>
-                </a>
-                <!-- Card: Housing & Fencing -->
-                <a class="block bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-slate-200" href="pages/02-housing-fencing.php">
-                    <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Housing</span>
-                    <h3 class="text-xl font-bold text-slate-900">Barn &amp; Fencing</h3>
-                    <p class="mt-2 text-slate-600">Design a draft-free shelter and predator-resistant fencing with secure gates.</p>
-                </a>
-                <!-- Card: Breeds -->
-                <a class="block bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-slate-200" href="pages/03-breeds.php">
-                    <span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Breeds</span>
-                    <h3 class="text-xl font-bold text-slate-900">Breeds &amp; Choosing</h3>
-                    <p class="mt-2 text-slate-600">Compare dairy, meat, and pet breeds to find the right fit for your goals.</p>
-                </a>
-                <!-- Card: Nutrition -->
-                <a class="block bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-slate-200" href="pages/04-nutrition-minerals.php">
-                    <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Nutrition</span>
-                    <h3 class="text-xl font-bold text-slate-900">Feeding &amp; Minerals</h3>
-                    <p class="mt-2 text-slate-600">Learn about hay, browse, grain, minerals, and providing clean water.</p>
-                </a>
-                <!-- Card: Health -->
-                <a class="block bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-slate-200" href="pages/05-health-vaccines-parasites.php">
-                    <span class="inline-block bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Health</span>
-                    <h3 class="text-xl font-bold text-slate-900">Vaccines &amp; Parasites</h3>
-                    <p class="mt-2 text-slate-600">Understand CDT shots, FAMACHA scoring, and body condition checks.</p>
-                </a>
-                <!-- Card: Tools -->
-                <a class="block bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-slate-200" href="pages/12-checklists.php">
-                    <span class="inline-block bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Tools</span>
-                    <h3 class="text-xl font-bold text-slate-900">Checklists &amp; Records</h3>
-                    <p class="mt-2 text-slate-600">Use our printable checklists and record-keeping forms to stay organized.</p>
-                </a>
-            </div>
-        </div>
-    </section>
+<main class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+    <h1 class="text-4xl font-bold text-slate-800">404 Not Found</h1>
+    <p class="mt-4 text-lg text-slate-600">The page you were looking for could not be found.</p>
+    <a href="/" class="mt-8 inline-block bg-emerald-600 text-white font-medium py-3 px-8 rounded-md hover:bg-emerald-700 transition-colors">Go to Homepage</a>
 </main>
-
-<?php include __DIR__ . '/includes/footer.php'; ?>
+<?php
+include __DIR__ . '/includes/footer.php';
+?>
