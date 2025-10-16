@@ -1,13 +1,7 @@
 <?php
 $PAGE_TITLE = 'Breeding & Kidding • Goat Care Guide';
 $PAGE_SCRIPTS = ['https://cdn.tailwindcss.com'];
-$PAGE_INLINE_JS = <<<HTML
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    // Page-specific JS can go here. Navigation is handled in the header.
-});
-</script>
-HTML;
+$PAGE_INLINE_JS = ''; // No page-specific JS needed now
 include __DIR__ . '/../includes/header.php';
 ?>
 
@@ -50,7 +44,7 @@ include __DIR__ . '/../includes/header.php';
                     <div class="prose prose-slate max-w-none">
                         <h4>Stages of Labor</h4>
                         <ol class="space-y-2">
-                            <li><strong>Early Labor:</strong> Can last 2-12 hours. Doe is restless, nesting, may talk to her belly. Her tail ligaments will feel completely gone.</li>
+                            <li><strong>Early Labor (12-24 hours before):</strong> Doe may separate herself from the herd, appear restless or anxious, paw at her bedding ("nesting"), or repeatedly look back at her side. Her udder will become very full and tight ("bagging up"), and her tail ligaments on either side of her spine will become very soft and seem to disappear.</li>
                             <li><strong>Active Labor:</strong> Forceful pushing begins. You'll see the amniotic sac "bubble." A normal "diving" presentation is two front feet and a nose.</li>
                             <li><strong>Afterbirth:</strong> The doe will pass the placenta within a few hours. Make sure it's all there; a retained placenta can cause infection.</li>
                         </ol>

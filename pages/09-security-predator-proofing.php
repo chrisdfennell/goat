@@ -1,13 +1,7 @@
 <?php
 $PAGE_TITLE = 'Security & Predator-Proofing • Goat Care Guide';
 $PAGE_SCRIPTS = ['https://cdn.tailwindcss.com'];
-$PAGE_INLINE_JS = <<<HTML
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    // Page-specific JS can go here. Navigation is handled in the header.
-});
-</script>
-HTML;
+$PAGE_INLINE_JS = ''; // No page-specific JS needed now
 include __DIR__ . '/../includes/header.php';
 ?>
 
@@ -78,18 +72,18 @@ include __DIR__ . '/../includes/header.php';
                         <tbody class="divide-y divide-slate-200 text-sm">
                             <tr>
                                 <td class="p-3 font-medium">Livestock Guardian Dog (LGD)</td>
-                                <td class="p-3">Extremely effective, bonds deeply with herd, deters most predators.</td>
-                                <td class="p-3">Requires training, can be barkers, needs good fencing to prevent roaming.</td>
+                                <td class="p-3">Extremely effective, bonds deeply with herd, deters most predators. Active 24/7.</td>
+                                <td class="p-3">Requires extensive training and secure fencing to prevent roaming. Can be prone to barking. Not a pet.</td>
                             </tr>
                             <tr>
                                 <td class="p-3 font-medium">Donkey (Standard or larger)</td>
-                                <td class="p-3">Natural hatred of canines, loud alarm call.</td>
-                                <td class="p-3">Can be aggressive towards kids, may not be effective against non-canine predators.</td>
+                                <td class="p-3">Natural hatred of canines (dogs, coyotes), has a very loud and startling alarm call.</td>
+                                <td class="p-3">Can be aggressive towards goat kids or new animals. May not be effective against non-canine predators like cougars.</td>
                             </tr>
                             <tr>
                                 <td class="p-3 font-medium">Llama</td>
-                                <td class="p-3">Alert, territorial, will charge and stomp threats.</td>
-                                <td class="p-3">Requires specific care, may not be as effective against a determined pack.</td>
+                                <td class="p-3">Alert, territorial, will charge and stomp threats. Generally quiet and calm with the herd.</td>
+                                <td class="p-3">Requires specific care (shearing, different minerals). May not be as effective against a determined pack of predators.</td>
                             </tr>
                         </tbody>
                     </table>

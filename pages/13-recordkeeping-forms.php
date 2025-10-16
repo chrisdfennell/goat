@@ -78,6 +78,22 @@ document.addEventListener('DOMContentLoaded', () => {
             doc.addPage();
             finalY = 20;
         }
+        
+        // --- Hoof Trimming & Health Checks ---
+        doc.setFontSize(12);
+        doc.text("Hoof Trimming & Health Checks", 14, finalY);
+        finalY += 5;
+        doc.autoTable({
+            ...tableStyles,
+            html: '#hoof-health-log-table',
+            startY: finalY,
+        });
+        finalY = doc.lastAutoTable.finalY + 10;
+        if (finalY > 180) {
+            doc.addPage();
+            finalY = 20;
+        }
+
 
         // --- Breeding & Kidding Log ---
         doc.setFontSize(12);
@@ -292,6 +308,28 @@ include __DIR__ . '/../includes/header.php';
                                 <td class="p-2"></td>
                                 <td class="p-2"></td>
                             </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+             <section>
+                <div class="flex justify-between items-center mb-4 border-b pb-2">
+                    <h2 class="text-2xl font-bold text-slate-900">Hoof Trimming &amp; Health Checks</h2>
+                    <button class="add-row-btn no-print text-sm bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold py-1 px-3 rounded-md" data-table-body-id="hoof-health-log-body">Add Row</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md border border-slate-200 overflow-x-auto">
+                    <table class="w-full min-w-[800px] text-sm text-left" id="hoof-health-log-table">
+                        <thead class="bg-slate-100">
+                            <tr>
+                                <th class="p-2 font-semibold">Date</th>
+                                <th class="p-2 font-semibold">Goat ID</th>
+                                <th class="p-2 font-semibold">Hoof Condition (Good/Fair/Poor)</th>
+                                <th class="p-2 font-semibold">FAMACHA Score</th>
+                                <th class="p-2 font-semibold">Body Condition Score (1-5)</th>
+                                <th class="p-2 font-semibold">Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200" contenteditable="true" data-key="hoof-health-log" id="hoof-health-log-body">
                             <tr>
                                 <td class="p-2"></td>
                                 <td class="p-2"></td>
@@ -308,7 +346,7 @@ include __DIR__ . '/../includes/header.php';
                                 <td class="p-2"></td>
                                 <td class="p-2"></td>
                             </tr>
-                            <tr>
+                             <tr>
                                 <td class="p-2"></td>
                                 <td class="p-2"></td>
                                 <td class="p-2"></td>
@@ -357,24 +395,6 @@ include __DIR__ . '/../includes/header.php';
                                 <td class="p-2"></td>
                                 <td class="p-2"></td>
                             </tr>
-                            <tr>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                            </tr>
-                            <tr>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -397,22 +417,6 @@ include __DIR__ . '/../includes/header.php';
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-slate-200" contenteditable="true" data-key="milk-log" id="milk-log-body">
-                            <tr>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                            </tr>
-                            <tr>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                            </tr>
                             <tr>
                                 <td class="p-2"></td>
                                 <td class="p-2"></td>

@@ -3,43 +3,7 @@ $PAGE_TITLE = 'Goat Care: Complete Beginner’s Guide';
 $PAGE_SCRIPTS = ['https://cdn.tailwindcss.com'];
 $PAGE_INLINE_JS = <<<HTML
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    // Dropdown navigation logic
-    const dropdownButton = document.getElementById('nav-dropdown-button');
-    const dropdownPanel = document.getElementById('nav-dropdown-panel');
 
-    if (dropdownButton && dropdownPanel) {
-        dropdownButton.addEventListener('click', (event) => {
-            event.stopPropagation();
-            dropdownPanel.classList.toggle('hidden');
-        });
-        document.addEventListener('click', (event) => {
-            if (!dropdownPanel.classList.contains('hidden') && !dropdownButton.contains(event.target)) {
-                dropdownPanel.classList.add('hidden');
-            }
-        });
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !dropdownPanel.classList.contains('hidden')) {
-                dropdownPanel.classList.add('hidden');
-            }
-        });
-    }
-
-    // Mobile menu logic
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenuPanel = document.getElementById('mobile-menu-panel');
-    const mobileMenuCloseButton = document.getElementById('mobile-menu-close-button');
-
-    if (mobileMenuButton && mobileMenuPanel) {
-        const toggleMenu = () => {
-            mobileMenuPanel.classList.toggle('hidden');
-            document.body.classList.toggle('overflow-hidden');
-        };
-
-        mobileMenuButton.addEventListener('click', toggleMenu);
-        mobileMenuCloseButton.addEventListener('click', toggleMenu);
-    }
-});
 </script>
 HTML;
 

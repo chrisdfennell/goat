@@ -95,7 +95,7 @@ include __DIR__ . '/../includes/header.php';
                 </table>
             </div>
         </section>
-        <section class="bg-white rounded-lg shadow-md border border-slate-200" id="breed-comparison">
+        <section class="bg-white rounded-lg shadow-md border border-slate-200 mb-12" id="breed-comparison">
             <div class="overflow-x-auto">
                 <table class="w-full text-left border-collapse">
                     <thead class="bg-slate-100">
@@ -177,6 +177,37 @@ include __DIR__ . '/../includes/header.php';
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </section>
+        <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">Where to Find Your Goats</h2>
+            <p class="text-slate-600 mb-4">Once you know what breed you want, the next step is finding healthy animals from a reliable source. Here are the most common options:</p>
+            <div class="space-y-6">
+                <div>
+                    <h3 class="font-semibold text-lg text-slate-800">Reputable Breeders</h3>
+                    <p class="text-slate-600 text-sm mt-1">This is the highly recommended option for beginners. A good breeder is an invaluable resource who can provide mentorship for years to come.</p>
+                    <ul class="mt-2 space-y-2 list-disc list-inside text-sm pl-4">
+                        <li><strong>Pros:</strong> You get access to the goat's full history, including health testing records (CAE, CL, Johne's), vaccination dates, and parentage. The animals are usually well-socialized and healthy.</li>
+                        <li><strong>Cons:</strong> This is often the most expensive option upfront. You may have to travel or get on a waiting list for kids.</li>
+                        <li><strong>How to find them:</strong> Look for breeders through national breed associations like the ADGA or AGS.</li>
+                    </ul>
+                </div>
+                 <div>
+                    <h3 class="font-semibold text-lg text-slate-800">Livestock Auctions</h3>
+                    <p class="text-slate-600 text-sm mt-1">Auctions can be tempting due to lower prices, but they carry significant risks for new owners.</p>
+                     <ul class="mt-2 space-y-2 list-disc list-inside text-sm pl-4">
+                        <li><strong>Pros:</strong> Goats are readily available and often cheaper than from a breeder.</li>
+                        <li><strong>Cons:</strong> You have no health history. The animals are stressed from transport and exposure to many other goats, making them highly susceptible to illness. You could unknowingly bring home serious diseases. Not recommended for beginners.</li>
+                    </ul>
+                </div>
+                 <div>
+                    <h3 class="font-semibold text-lg text-slate-800">Online & Local Classifieds</h3>
+                    <p class="text-slate-600 text-sm mt-1">Sites like Craigslist or local farm Facebook groups can be a mixed bag. Proceed with caution.</p>
+                     <ul class="mt-2 space-y-2 list-disc list-inside text-sm pl-4">
+                        <li><strong>Pros:</strong> Can be a good way to find local homesteaders or hobby farmers selling surplus animals.</li>
+                        <li><strong>Cons:</strong> Quality and health vary wildly. Always insist on visiting the farm to see the living conditions and the rest of the herd. Ask the same tough questions you would ask a reputable breeder regarding disease testing and health history.</li>
+                    </ul>
+                </div>
             </div>
         </section>
         <div class="flex justify-between items-center pt-12">

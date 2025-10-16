@@ -3,9 +3,7 @@ $PAGE_TITLE = 'Health: Vaccines & Parasites • Goat Care Guide';
 $PAGE_SCRIPTS = ['https://cdn.tailwindcss.com'];
 $PAGE_INLINE_JS = <<<HTML
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    // Page-specific JS can go here. Navigation is handled in the header.
-});
+
 </script>
 HTML;
 include __DIR__ . '/../includes/header.php';
@@ -42,6 +40,14 @@ include __DIR__ . '/../includes/header.php';
                 <div class="mt-4 bg-blue-50 border-l-4 border-blue-500 text-blue-900 p-4 rounded-r-lg text-sm">
                     <strong>Note:</strong> Always consult your veterinarian for the vaccination schedule appropriate for your area and herd. Other vaccines (like for rabies or CL) may be recommended.
                 </div>
+            </section>
+             <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Understanding Tetanus Prevention</h2>
+                <p class="text-slate-600 mb-4">Tetanus is a deadly threat, but it's important to know the difference between the two tools you have to fight it.</p>
+                <ul class="space-y-3 list-disc list-inside text-slate-700">
+                    <li><strong>CD&T Toxoid (Vaccine):</strong> This is for <strong>prevention</strong>. It's the "tetanus shot" that is part of the annual CDT vaccine. It works by teaching the goat's immune system to create its own long-lasting protection against tetanus. It takes about two weeks to become fully effective.</li>
+                    <li><strong>Tetanus Antitoxin:</strong> This is for <strong>emergencies</strong>. It provides immediate, temporary protection and is used when a goat has an injury (like from a disbudding, castration, or deep wound) and is not up-to-date on its CDT vaccine. The protection from an antitoxin shot only lasts for about 7-10 days.</li>
+                </ul>
             </section>
             <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Smart Parasite Management</h2>

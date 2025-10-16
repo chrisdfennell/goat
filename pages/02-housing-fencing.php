@@ -1,13 +1,7 @@
 <?php
 $PAGE_TITLE = 'Housing & Fencing • Goat Care Guide';
 $PAGE_SCRIPTS = ['https://cdn.tailwindcss.com'];
-$PAGE_INLINE_JS = <<<HTML
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    // Page-specific JS can go here. Navigation is handled in the header.
-});
-</script>
-HTML;
+$PAGE_INLINE_JS = ''; // No page-specific JS needed now
 include __DIR__ . '/../includes/header.php';
 ?>
 
@@ -61,6 +55,18 @@ include __DIR__ . '/../includes/header.php';
                     <li>For extra security, add a carabiner clip or a chain with a snap hook to every gate latch.</li>
                     <li>Ensure gates swing freely and don't sag, which can create gaps for goats to squeeze through.</li>
                 </ul>
+            </section>
+            <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Rotational Grazing & Temporary Fencing</h2>
+                <p class="text-slate-600 mb-4">For those with a small herd (four or fewer goats), a permanent perimeter fence may be more than you need. A movable, temporary enclosure using livestock panels is a fantastic and flexible option.</p>
+                <ul class="space-y-3 list-disc list-inside text-slate-700">
+                    <li><strong>The Setup:</strong> Simply connect four 16-foot livestock panels to form a square pen. This gives your goats a generous area to browse while keeping them secure.</li>
+                    <li><strong>Benefits of Rotation:</strong> Moving the panels every few days to a fresh patch of ground is a powerful strategy for parasite control. Goats are constantly moving away from their own manure, which dramatically reduces their exposure to worm larvae.</li>
+                    <li><strong>Pasture Health:</strong> This method also improves pasture health by preventing overgrazing and allowing areas to recover and regrow.</li>
+                </ul>
+                <div class="mt-4 bg-blue-50 border-l-4 border-blue-500 text-blue-900 p-4 rounded-r-lg text-sm">
+                    <strong>Tip:</strong> Even with temporary fencing, goats must always have access to their main three-sided shelter for protection from the elements.
+                </div>
             </section>
         </div>
         <div class="flex justify-between items-center pt-12">

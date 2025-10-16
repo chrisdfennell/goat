@@ -1,13 +1,7 @@
 <?php
 $PAGE_TITLE = 'Bottle-Feeding & Kid Care • Goat Care Guide';
 $PAGE_SCRIPTS = ['https://cdn.tailwindcss.com'];
-$PAGE_INLINE_JS = <<<HTML
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    // Page-specific JS can go here. Navigation is handled in the header.
-});
-</script>
-HTML;
+$PAGE_INLINE_JS = ''; // No page-specific JS needed now
 include __DIR__ . '/../includes/header.php';
 ?>
 
@@ -83,6 +77,15 @@ include __DIR__ . '/../includes/header.php';
                     <li><strong>Disbudding:</strong> If you plan to prevent horn growth, it must be done by an experienced person between 7-14 days of age. This is a skilled and sensitive procedure.</li>
                     <li><strong>Vaccinations:</strong> Begin the CDT vaccine series around 4-6 weeks of age, following your veterinarian's schedule.</li>
                     <li><strong>Coccidiosis Prevention:</strong> Kids are very susceptible to coccidiosis, an internal parasite that causes diarrhea (scours). Keep their environment scrupulously clean and dry. Many people use a medicated feed (coccidiostat) as a preventative measure.</li>
+                </ul>
+            </section>
+            <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Understanding Milk Goiter</h2>
+                <p class="text-slate-600 mb-4">It can be alarming to find a soft, squishy, fluid-filled swelling under your kid's jaw, but in most cases, it's a harmless condition known as milk goiter.</p>
+                <ul class="space-y-3 list-disc list-inside text-slate-700">
+                    <li><strong>What it is:</strong> A temporary swelling of the thymus gland, often seen in fast-growing kids (especially bottle babies) between 2 weeks and 4 months of age.</li>
+                    <li><strong>What it isn't:</strong> It is almost never a sign of iodine deficiency. It should not be confused with "bottle jaw," which is caused by anemia from parasites and feels like thick, pitting edema. A milk goiter feels more like a water balloon.</li>
+                    <li><strong>What to do:</strong> In almost all cases, the correct action is to do nothing. The swelling will resolve on its own as the kid's growth rate levels out. Do not supplement with iodine, as this can be harmful if not needed.</li>
                 </ul>
             </section>
         </div>

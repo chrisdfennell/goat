@@ -1,13 +1,7 @@
 <?php
 $PAGE_TITLE = 'Behavior, Training & Enrichment • Goat Care Guide';
 $PAGE_SCRIPTS = ['https://cdn.tailwindcss.com'];
-$PAGE_INLINE_JS = <<<HTML
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    // Page-specific JS can go here. Navigation is handled in the header.
-});
-</script>
-HTML;
+$PAGE_INLINE_JS = ''; // No page-specific JS needed now
 include __DIR__ . '/../includes/header.php';
 ?>
 
@@ -23,6 +17,8 @@ include __DIR__ . '/../includes/header.php';
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Understanding Goat Psychology</h2>
                 <ul class="space-y-3 list-disc list-inside text-slate-700">
                     <li><strong>Herd Animals:</strong> Goats have a strong herd instinct and a clear pecking order. The "herd queen" usually eats first. Never keep a single goat alone.</li>
+                    <li><strong>Prey Animal Instincts:</strong> Unlike dogs and cats (predators), goats are prey animals. This means they startle easily and find safety in numbers. Understanding this is key to gaining their trust; always move calmly and quietly around your herd.</li>
+                    <li><strong>Browsers, Not Grazers:</strong> Goats' primary instinct is to eat "browse"—woody plants, trees, and bushes—rather than grazing on grass. This drives their curiosity and their love of tasting everything, which is why providing proper enrichment is so important.</li>
                     <li><strong>Curious &amp; Intelligent:</strong> Goats are incredibly smart and inquisitive. This is why they test fences and get into trouble. They need mental stimulation.</li>
                     <li><strong>Creatures of Habit:</strong> They thrive on routine. Feeding at the same time every day reduces stress.</li>
                     <li><strong>Playful Nature:</strong> Goats, especially kids, love to run, jump, and play "king of the mountain." This is normal and healthy behavior.</li>
@@ -53,6 +49,26 @@ include __DIR__ . '/../includes/header.php';
                     <li><strong>Training for the Milk Stand:</strong> Even if you don't have dairy goats, training them to hop onto a stand and eat a small treat is invaluable for hoof trimming and vet checks.</li>
                     <li><strong>Dealing with Head-Butting:</strong> A goat that head-butts people can be dangerous. Never play head-butting games with them, especially when they are young and cute. A firm "No!" and a quick, surprising squirt from a water bottle can deter this behavior.</li>
                 </ul>
+            </section>
+            <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Taming & Building Trust</h2>
+                <p class="text-slate-600 mb-4">Working with a shy or flighty goat requires patience and an understanding of their prey-animal mindset. The goal is to teach them that you are not a threat. Never chase a goat; this only confirms their fear.</p>
+                <div class="prose prose-slate max-w-none">
+                    <h4>The "Advance and Retreat" Method</h4>
+                    <p>This technique is based on applying gentle pressure and rewarding the goat by removing that pressure as soon as they show the desired behavior (calmness).</p>
+                    <ol>
+                        <li><strong>Start in a Small Space:</strong> Begin in a small pen or catch area where the goat cannot get too far away from you. A 12x12 stall is ideal.</li>
+                        <li><strong>Calm Presence:</strong> Enter the pen calmly and quietly. Don't look directly at the goat, as predators stare. Instead, turn your body slightly to the side and use your peripheral vision.</li>
+                        <li><strong>Apply Gentle Pressure:</strong> Slowly and calmly, walk towards the goat. As soon as it shows any sign of stress (flicking an ear, tensing up, taking a step away), STOP. This is the "pressure."</li>
+                        <li><strong>Wait for a Positive Sign:</strong> Stand still and wait. The moment the goat shows a sign of relaxing—even something as small as turning to look at you, licking its lips, or shifting its weight—immediately "release the pressure" by taking a step back and turning away slightly.</li>
+                        <li><strong>Repeat, Repeat, Repeat:</strong> Continue this process. Step forward (pressure), wait for a calm sign, step back (reward). Over many repetitions, the goat will learn that showing calm behavior makes the "scary thing" (you) go away.</li>
+                        <li><strong>First Touch:</strong> Eventually, you will be able to get close enough to touch the goat. Reach out slowly—not for the head (which is intimidating), but for the shoulder or side. The instant your hand makes contact, retreat. Your touch is the pressure, and your retreat is the reward.</li>
+                        <li><strong>Build on Success:</strong> Gradually increase the duration of your touch, moving on to gentle scratches under the chin or on the neck. Always end on a positive note. These short, successful sessions build trust far more effectively than one long, stressful encounter.</li>
+                    </ol>
+                    <div class="mt-4 bg-blue-50 border-l-4 border-blue-500 text-blue-900 p-4 rounded-r-lg text-sm">
+                        <strong>Patience is Key:</strong> Taming a goat can take days or weeks, depending on its age and past experiences. Consistency and a calm demeanor are your most important tools.
+                    </div>
+                </div>
             </section>
         </div>
         <div class="flex justify-between items-center pt-12">

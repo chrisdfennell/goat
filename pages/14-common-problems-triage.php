@@ -1,13 +1,7 @@
 <?php
 $PAGE_TITLE = 'Common Problems & Triage • Goat Care Guide';
 $PAGE_SCRIPTS = ['https://cdn.tailwindcss.com'];
-$PAGE_INLINE_JS = <<<HTML
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    // Page-specific JS can go here. Navigation is handled in the header.
-});
-</script>
-HTML;
+$PAGE_INLINE_JS = ''; // No page-specific JS needed now
 include __DIR__ . '/../includes/header.php';
 ?>
 
@@ -37,6 +31,15 @@ include __DIR__ . '/../includes/header.php';
                     <li><strong>Possible Causes:</strong> Coccidiosis (in kids 3 weeks to 5 months old), bacterial infection (E. coli, Salmonella), worms, sudden feed changes.</li>
                     <li><strong>Immediate Action:</strong> Isolate the sick goat if possible. Provide electrolytes to prevent dehydration. Get a fecal sample to your vet to test for coccidia and worms. Withhold grain and feed only grass hay.</li>
                     <li><strong>Red Flags:</strong> Bloody stool, high fever, severe lethargy, or dehydration (skin "tents" when pinched).</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">Constipation</h2>
+                <p class="text-slate-600 mb-4">While less common than scours, constipation can be a sign of dehydration or a feed impaction and should be addressed promptly.</p>
+                <ul class="space-y-2 list-disc list-inside">
+                    <li><strong>Symptoms:</strong> Straining with no result, tail held out flat for long periods, hunched posture, lethargy, lack of appetite, and a hard, distended abdomen.</li>
+                    <li><strong>Immediate Action:</strong> The first step is hydration. Offer warm water mixed with electrolytes. A gentle drench of mineral oil (30-60ml for an adult goat) can help lubricate the digestive tract. Gently massaging the goat's abdomen may also help break up an impaction.</li>
+                    <li><strong>Red Flags:</strong> If the goat is in obvious pain, grinds its teeth, or shows no improvement after a few hours, it's time to call the vet. A complete blockage is an emergency.</li>
                 </ul>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">

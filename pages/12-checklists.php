@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         checklists.forEach(section => {
             const title = section.querySelector('h2').innerText;
-            const items = section.querySelectorAll('li');
+            const items = section.querySelectorAll('li.checklist-item'); // Target only checklist items
             const bodyData = [];
 
             items.forEach(item => {
@@ -126,6 +126,26 @@ include __DIR__ . '/../includes/header.php';
             </div>
         </section>
         <div class="space-y-12" id="checklist-container">
+             <section class="checklist-section bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Initial Barn & Supply Setup</h2>
+                <p class="text-slate-600 mb-4">Have these items ready *before* you bring your first goats home to ensure a smooth transition.</p>
+                <div class="grid md:grid-cols-2 gap-x-8 gap-y-4">
+                    <ul class="space-y-3">
+                        <h3 class="font-semibold text-lg text-slate-800">Shelter & Fencing</h3>
+                        <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Secure, draft-free shelter (at least 15 sq ft per goat)</label></li>
+                        <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Goat-proof fencing (min. 4 ft high) and secure gates</label></li>
+                        <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Bedding material (straw or pine shavings)</label></li>
+                    </ul>
+                    <ul class="space-y-3">
+                        <h3 class="font-semibold text-lg text-slate-800">Feeding & Water</h3>
+                         <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Sturdy hay feeder (wall-mounted or trough)</label></li>
+                        <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Two heavy-duty water buckets or a trough</label></li>
+                        <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Covered mineral feeder (for loose minerals)</label></li>
+                        <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Bag of loose goat minerals</label></li>
+                        <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Bale of good quality grass hay</label></li>
+                    </ul>
+                </div>
+            </section>
             <section class="checklist-section bg-white p-6 rounded-lg shadow-md border border-slate-200">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Daily &amp; Weekly Chores</h2>
                 <div class="grid md:grid-cols-2 gap-8">

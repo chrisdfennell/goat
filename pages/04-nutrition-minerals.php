@@ -3,9 +3,7 @@ $PAGE_TITLE = 'Nutrition & Minerals • Goat Care Guide';
 $PAGE_SCRIPTS = ['https://cdn.tailwindcss.com'];
 $PAGE_INLINE_JS = <<<HTML
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    // Page-specific JS can go here. Navigation is handled in the header.
-});
+
 </script>
 HTML;
 include __DIR__ . '/../includes/header.php';
@@ -47,6 +45,15 @@ include __DIR__ . '/../includes/header.php';
                 </ul>
             </section>
             <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Advanced Mineral Considerations</h2>
+                <p class="text-slate-600 mb-4">Beyond the basics, several factors can affect mineral absorption and require special attention.</p>
+                <ul class="space-y-3 list-disc list-inside text-slate-700">
+                    <li><strong>Well Water Issues:</strong> If your well water is high in sulfur (stinky smell) or iron (orange stains), it can bind with copper in the goat's system, making it unavailable and leading to deficiency even with a good mineral program. Consider additional copper supplementation in these cases.</li>
+                    <li><strong>Do Not Mix Minerals:</strong> Never mix anything directly into your loose minerals, such as baking soda, kelp, or diatomaceous earth. Minerals are carefully balanced with salt to regulate intake. Adding other substances will alter that balance and can cause your goats to eat too little of the essential minerals they need. Provide any other supplements in a separate, free-choice container.</li>
+                    <li><strong>"Sheep & Goat" Minerals are Dangerous:</strong> Never use minerals labeled for "Sheep and Goats." Sheep are highly sensitive to copper and can be poisoned by levels that goats require to be healthy. These mixes contain dangerously low levels of copper for a goat's needs and will lead to severe deficiency.</li>
+                </ul>
+            </section>
+            <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Grain &amp; Concentrates</h2>
                 <p class="text-slate-600 mb-4">Grain is a supplement, not a staple. It should be used strategically for goats with higher energy needs.</p>
                 <ul class="space-y-2 list-disc list-inside text-slate-600">
@@ -54,6 +61,14 @@ include __DIR__ . '/../includes/header.php';
                     <li><strong>Who doesn't?</strong> Wethers, bucks (outside of rut), and dry does generally do not need grain and can become overweight and unhealthy with it.</li>
                     <li><strong>Go Slow:</strong> Introduce or increase grain rations slowly over a week to allow the goat's rumen to adjust. Too much, too fast, can cause life-threatening acidosis.</li>
                     <li><strong>Baking Soda:</strong> Always provide free-choice baking soda. Goats will eat it to self-regulate their rumen pH and buffer against acidosis.</li>
+                </ul>
+            </section>
+            <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Special Considerations for Wethers</h2>
+                <p class="text-slate-600 mb-4">Wethers (castrated males) have unique dietary needs and are much more sensitive to mineral imbalances than does.</p>
+                <ul class="space-y-3 list-disc list-inside text-slate-700">
+                    <li><strong>Avoid Grain:</strong> Wethers do not need grain. Their diet should consist of pasture/browse and grass hay. Grain is high in phosphorus, which can lead to the formation of urinary calculi (stones) that cause a life-threatening blockage.</li>
+                    <li><strong>Limit Alfalfa:</strong> While alfalfa is great for milking does, it's very high in calcium. An improper calcium-to-phosphorus ratio is a primary cause of urinary stones. Too much calcium can also interfere with the absorption of zinc. Grass hay is a much safer primary forage for wethers.</li>
                 </ul>
             </section>
             <section class="bg-red-50 border-l-4 border-red-500 text-red-800 p-6 rounded-r-lg">

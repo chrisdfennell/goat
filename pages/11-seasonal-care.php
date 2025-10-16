@@ -3,9 +3,7 @@ $PAGE_TITLE = 'Seasonal Care • Goat Care Guide';
 $PAGE_SCRIPTS = ['https://cdn.tailwindcss.com'];
 $PAGE_INLINE_JS = <<<HTML
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    // Page-specific JS can go here. Navigation is handled in the header.
-});
+
 </script>
 HTML;
 include __DIR__ . '/../includes/header.php';
@@ -25,7 +23,8 @@ include __DIR__ . '/../includes/header.php';
                     <div>
                         <p class="text-slate-600 mb-4">The primary goals for winter are to keep goats warm, dry, and well-fed, as they burn extra calories to maintain body temperature.</p>
                         <ul class="space-y-3 list-disc list-inside text-slate-700">
-                            <li><strong>Shelter:</strong> Ensure the barn is draft-free at goat level. Use a deep litter bedding method with straw or pine shavings to generate compost heat.</li>
+                            <li><strong>Shelter:</strong> Ensure the barn is draft-free at goat level but well-ventilated up high. Goats do <strong>not</strong> need a heated or insulated barn; their cashmere undercoats and huddling behavior keep them warm. A tightly sealed barn can trap ammonia, leading to dangerous respiratory damage before you can even smell it.</li>
+                            <li><strong>Bedding:</strong> Use a deep litter method with straw, which is much warmer and offers better insulation from the cold ground than wood shavings.</li>
                             <li><strong>Water:</strong> Use heated buckets or a tank de-icer. Goats will not drink enough if their water is icy, which can lead to dehydration and other health issues.</li>
                             <li><strong>Feed:</strong> Increase hay rations, especially for pregnant does. Monitor Body Condition Score (BCS) to ensure they aren't losing weight.</li>
                             <li><strong>Health:</strong> Watch for signs of respiratory illness (coughing, runny nose). Check for external parasites like lice, which thrive in winter coats.</li>

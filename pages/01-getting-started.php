@@ -3,38 +3,7 @@ $PAGE_TITLE = 'Getting Started • Goat Care Guide';
 $PAGE_SCRIPTS = ['https://cdn.tailwindcss.com'];
 $PAGE_INLINE_JS = <<<HTML
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    // Dropdown and mobile menu logic
-    const dropdownButton = document.getElementById('nav-dropdown-button');
-    const dropdownPanel = document.getElementById('nav-dropdown-panel');
-    if (dropdownButton && dropdownPanel) {
-        dropdownButton.addEventListener('click', (event) => {
-            event.stopPropagation();
-            dropdownPanel.classList.toggle('hidden');
-        });
-        document.addEventListener('click', (event) => {
-            if (!dropdownPanel.classList.contains('hidden') && !dropdownButton.contains(event.target)) {
-                dropdownPanel.classList.add('hidden');
-            }
-        });
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !dropdownPanel.classList.contains('hidden')) {
-                dropdownPanel.classList.add('hidden');
-            }
-        });
-    }
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenuPanel = document.getElementById('mobile-menu-panel');
-    const mobileMenuCloseButton = document.getElementById('mobile-menu-close-button');
-    if (mobileMenuButton && mobileMenuPanel) {
-        const toggleMenu = () => {
-            mobileMenuPanel.classList.toggle('hidden');
-            document.body.classList.toggle('overflow-hidden');
-        };
-        mobileMenuButton.addEventListener('click', toggleMenu);
-        mobileMenuCloseButton.addEventListener('click', toggleMenu);
-    }
-});
+
 </script>
 HTML;
 include __DIR__ . '/../includes/header.php';
@@ -54,6 +23,15 @@ include __DIR__ . '/../includes/header.php';
                     <li><strong>Zoning &amp; Ordinances:</strong> Check your local town or county laws. Are livestock permitted on your property size? Are there restrictions on animal numbers, structures, or setbacks from property lines?</li>
                     <li><strong>Talk to Your Neighbors:</strong> Let your direct neighbors know your plans. Explain your fencing and security measures. A friendly heads-up can prevent future conflicts.</li>
                     <li><strong>Find a Vet:</strong> Locate a large-animal or livestock veterinarian who treats goats *before* you need one. Ask if they do farm calls. This is a critical step many beginners forget.</li>
+                </ul>
+            </section>
+            <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Goat-Proof Your Property</h2>
+                <p class="text-slate-600 mb-4">Goats are browsers, which means they prefer to eat trees and bushes, and they explore the world with their mouths. While they don't eat tin cans, they will "taste" almost anything out of curiosity, which can be dangerous.</p>
+                <ul class="space-y-3 list-disc list-inside text-slate-700">
+                    <li><strong>Electrical Dangers:</strong> Ensure any and all electrical cords in or near their enclosure are completely out of reach. A curious chew can lead to electrocution.</li>
+                    <li><strong>Plastic & Paper:</strong> Goats have been known to eat plastic bags, which can cause a fatal digestive obstruction. They also love to eat paper, so keep it secured.</li>
+                    <li><strong>Toxic Plants:</strong> Walk your property and identify any plants that are toxic to goats. Pay special attention to common ornamental shrubs like azaleas, rhododendrons, and yews.</li>
                 </ul>
             </section>
             <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
@@ -79,6 +57,7 @@ include __DIR__ . '/../includes/header.php';
                     <li><strong>Vaccination &amp; Deworming History:</strong> What vaccines have they had and when? What is your parasite management program?</li>
                     <li><strong>Feed:</strong> What brand of feed and type of hay are they currently eating? (Get a small bag to help transition them slowly).</li>
                     <li><strong>Temperament:</strong> Ask to see the parents (dam and sire) if possible. A calm dam often raises calm kids.</li>
+                    <li><strong>For Bottle Babies:</strong> Ask the seller to give the kid a bottle in front of you. If the kid doesn't eagerly take the nipple and suck on its own, do not buy it. A weak or unwilling bottle-feeder is a sign of potential health issues.</li>
                 </ul>
             </section>
         </div>

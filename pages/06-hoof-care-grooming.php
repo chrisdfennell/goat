@@ -1,13 +1,7 @@
 <?php
 $PAGE_TITLE = 'Hoof Care & Grooming • Goat Care Guide';
 $PAGE_SCRIPTS = ['https://cdn.tailwindcss.com'];
-$PAGE_INLINE_JS = <<<HTML
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    // Page-specific JS can go here. Navigation is handled in the header.
-});
-</script>
-HTML;
+$PAGE_INLINE_JS = ''; // No page-specific JS needed now
 include __DIR__ . '/../includes/header.php';
 ?>
 
@@ -54,6 +48,15 @@ include __DIR__ . '/../includes/header.php';
                         </div>
                     </div>
                 </div>
+            </section>
+            <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Common Hoof Problems</h2>
+                <p class="text-slate-600 mb-4">Wet, muddy conditions are the biggest enemy of healthy hooves. Knowing what to look for can help you treat issues before they cause lameness.</p>
+                <ul class="space-y-3 list-disc list-inside text-slate-700">
+                    <li><strong>Hoof Scald:</strong> This is an infection of the skin between the two toes of the hoof. It will look red, raw, and inflamed, and may have a white, pasty discharge. It is often the first stage of hoof rot.</li>
+                    <li><strong>Hoof Rot:</strong> A more advanced infection that involves the hoof itself, not just the skin. It has a distinctly foul, rotten odor and you may see black, necrotic (dead) tissue. Hoof rot can eat away at the sole of the hoof and requires aggressive treatment.</li>
+                    <li><strong>Treatment:</strong> For both conditions, treatment involves trimming away any affected tissue to expose it to air, followed by treatment with a zinc sulfate foot bath or a topical spray like Koppertox. Keeping the goat in a clean, dry area is essential for healing.</li>
+                </ul>
             </section>
             <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Grooming &amp; Coat Care</h2>
