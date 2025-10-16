@@ -1,7 +1,7 @@
 <?php
 $PAGE_TITLE = 'Glossary & Resources • Goat Care Guide';
 $PAGE_SCRIPTS = ['https://cdn.tailwindcss.com'];
-$PAGE_INLINE_JS = ''; // No page-specific JS needed now
+$PAGE_INLINE_JS = '';
 include __DIR__ . '/../includes/header.php';
 ?>
 
@@ -17,52 +17,58 @@ include __DIR__ . '/../includes/header.php';
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Common Goat Terminology</h2>
                 <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
                     <div>
-                        <p><strong id="buck" class="text-slate-800">Buck:</strong> An intact (uncastrated) male goat.</p>
+                        <p id="buck"><strong class="text-slate-800">Buck:</strong> An intact (uncastrated) male goat.</p>
                     </div>
                     <div>
-                        <p><strong id="doe" class="text-slate-800">Doe:</strong> A female goat.</p>
+                        <p id="buckling"><strong class="text-slate-800">Buckling:</strong> A male baby goat (under one year of age).</p>
                     </div>
                     <div>
-                        <p><strong id="wether" class="text-slate-800">Wether:</strong> A castrated male goat.</p>
+                        <p id="doe"><strong class="text-slate-800">Doe:</strong> A female goat.</p>
                     </div>
                     <div>
-                        <p><strong id="kid" class="text-slate-800">Kid:</strong> A baby goat, male or female.</p>
+                        <p id="doeling"><strong class="text-slate-800">Doeling:</strong> A female baby goat (under one year of age).</p>
                     </div>
                     <div>
-                        <p><strong id="buckling" class="text-slate-800">Buckling:</strong> A male baby goat.</p>
+                        <p id="wether"><strong class="text-slate-800">Wether:</strong> A castrated male goat.</p>
                     </div>
                     <div>
-                        <p><strong id="doeling" class="text-slate-800">Doeling:</strong> A female baby goat.</p>
+                        <p id="kid"><strong class="text-slate-800">Kid:</strong> A baby goat, male or female.</p>
                     </div>
                     <div>
-                        <p><strong id="kidding" class="text-slate-800">Kidding:</strong> The act of a doe giving birth.</p>
+                        <p id="kidding"><strong class="text-slate-800">Kidding:</strong> The act of a doe giving birth.</p>
                     </div>
                     <div>
-                        <p><strong id="dam" class="text-slate-800">Dam:</strong> The mother of a goat.</p>
+                        <p id="dam"><strong class="text-slate-800">Dam:</strong> The mother of a goat.</p>
                     </div>
                     <div>
-                        <p><strong id="sire" class="text-slate-800">Sire:</strong> The father of a goat.</p>
+                        <p id="sire"><strong class="text-slate-800">Sire:</strong> The father of a goat.</p>
                     </div>
                     <div>
-                        <p><strong id="freshen" class="text-slate-800">Freshen:</strong> To begin producing milk after giving birth.</p>
+                        <p id="freshen"><strong class="text-slate-800">Freshen:</strong> To begin producing milk after giving birth.</p>
                     </div>
                     <div>
-                        <p><strong id="dry-doe" class="text-slate-800">Dry Doe:</strong> A doe that is not currently lactating (producing milk).</p>
+                        <p id="dry-doe"><strong class="text-slate-800">Dry Doe:</strong> A doe that is not currently lactating (producing milk).</p>
+                    </div>
+                     <div>
+                        <p id="heat"><strong class="text-slate-800">Heat (Estrus):</strong> The period in a doe's reproductive cycle (usually 12-48 hours) when she is fertile and receptive to a buck.</p>
                     </div>
                     <div>
-                        <p><strong id="polled" class="text-slate-800">Polled:</strong> A goat that is naturally hornless due to genetics.</p>
+                        <p id="polled"><strong class="text-slate-800">Polled:</strong> A goat that is naturally hornless due to genetics.</p>
                     </div>
                     <div>
-                        <p><strong id="disbudding" class="text-slate-800">Disbudding:</strong> The process of removing horn buds on a young kid to prevent horn growth.</p>
+                        <p id="disbudding"><strong class="text-slate-800">Disbudding:</strong> The process of removing horn buds on a young kid to prevent horn growth.</p>
                     </div>
                     <div>
-                        <p><strong id="scurs" class="text-slate-800">Scurs:</strong> Small, misshapen horn growths that can occur after an incomplete disbudding.</p>
+                        <p id="scurs"><strong class="text-slate-800">Scurs:</strong> Small, misshapen horn growths that can occur after an incomplete disbudding.</p>
                     </div>
                     <div>
-                        <p><strong id="rumen" class="text-slate-800">Rumen:</strong> The largest of the four stomach compartments in a goat, responsible for fermentation.</p>
+                        <p id="rumen"><strong class="text-slate-800">Rumen:</strong> The largest of the four stomach compartments in a goat, responsible for fermentation.</p>
                     </div>
                     <div>
-                        <p><strong id="browse" class="text-slate-800">Browse:</strong> Woody plants, shrubs, and leaves that goats prefer to eat.</p>
+                        <p id="browse"><strong class="text-slate-800">Browse:</strong> Woody plants, shrubs, and leaves that goats prefer to eat.</p>
+                    </div>
+                    <div>
+                        <p id="colostrum"><strong class="text-slate-800">Colostrum:</strong> A doe's first milk after kidding, rich in antibodies essential for a kid's immunity.</p>
                     </div>
                 </div>
             </section>
@@ -70,26 +76,43 @@ include __DIR__ . '/../includes/header.php';
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Key Health Concepts in Detail</h2>
                 <div class="space-y-6">
                     <div>
-                        <p><strong id="cae" class="text-slate-800">CAE (Caprine Arthritis Encephalitis):</strong> A contagious and incurable viral disease, primarily affecting dairy goats. It is most often transmitted from an infected doe to her kids through colostrum or milk. It can cause chronic arthritis (painful, swollen joints, especially knees), "hard udder" mastitis, and in rare cases, encephalitis in young kids. There is no treatment, which is why buying from a herd that tests negative for CAE is the single most important step for a new goat owner.</p>
+                        <h3 id="bcs" class="text-lg font-semibold text-slate-800">BCS (Body Condition Score)</h3>
+                        <p class="mt-1 text-slate-600">This is a hands-on 1-5 scale used to assess a goat's body fat reserves, which is a key indicator of health. You can't judge condition by sight alone, especially on a goat with a thick winter coat. You must feel along their spine, ribs, and hips to determine their score.</p>
+                    </div>
+                    <div>
+                        <h3 id="cdt" class="text-lg font-semibold text-slate-800">CDT Vaccine</h3>
+                        <p class="mt-1 text-slate-600">The core vaccine for goats. "CD" protects against Clostridium perfringens types C & D (enterotoxemia or "overeating disease"), and "T" protects against Tetanus. This vaccine is critical for preventing sudden death from digestive issues or infected wounds.</p>
                     </div>
                      <div>
-                        <p><strong id="cl" class="text-slate-800">CL (Caseous Lymphadenitis):</strong> A chronic, contagious bacterial infection that causes abscesses in the lymph nodes, most commonly around the jaw, neck, and shoulders. These abscesses contain a thick, pus-like material. The bacteria can survive in the soil for years. While not always fatal, it is incurable and can significantly impact a goat's health and the biosecurity of your farm. Testing and culling infected animals is the primary management strategy.</p>
+                        <h3 id="tetanus" class="text-lg font-semibold text-slate-800">Tetanus: Toxoid vs. Antitoxin</h3>
+                        <p class="mt-1 text-slate-600">It is vital to understand the difference. The **CDT Toxoid** is the vaccine you give annually for long-term prevention. It prompts the goat's body to create its own antibodies. The **Tetanus Antitoxin** provides immediate, temporary antibodies and is only used in an emergency, such as after an injury if the goat is not up-to-date on its vaccine, or for kids at banding/castration time.</p>
                     </div>
                     <div>
-                        <p><strong id="johnes" class="text-slate-800">Johne's Disease:</strong> A fatal and contagious gastrointestinal disease caused by bacteria that leads to a slow, progressive wasting of the animal. Symptoms, which often don't appear for years, include chronic diarrhea and severe weight loss despite a good appetite. It is transmitted primarily through manure. Like CAE and CL, it is incurable, and buying from tested-negative herds is essential.</p>
+                        <h3 id="famacha" class="text-lg font-semibold text-slate-800">FAMACHA© Scoring</h3>
+                        <p class="mt-1 text-slate-600">This is a system for assessing anemia by checking the color of a goat's lower eyelids against a chart. It is the primary tool for managing the deadly barber pole worm (<span class="italic">Haemonchus contortus</span>), allowing you to deworm only the animals that need it and thus slowing parasite resistance.</p>
                     </div>
                     <div>
-                        <p><strong id="cdt" class="text-slate-800">CDT Vaccine &amp; Tetanus Prevention:</strong> The core vaccine for goats is "CDT," which protects against *Clostridium perfringens* types C & D (enterotoxemia or "overeating disease") and Tetanus. For tetanus protection, it is critical to understand the two different types of injections:</p>
-                        <ul class="mt-2 space-y-2 list-disc list-inside text-sm pl-4">
-                           <li><strong>Tetanus Toxoid:</strong> This is the "vaccine" part of the CDT shot. It works by stimulating the goat's own immune system to create long-lasting antibodies against the tetanus toxin. It is used for routine, preventative care. It requires a booster and takes about two weeks to become fully effective.</li>
-                           <li><strong>Tetanus Antitoxin:</strong> This is an injection of pre-made antibodies that provides immediate but temporary protection (about 7-10 days). It is used for emergencies, such as after an injury in an unvaccinated goat, or to give immediate protection to newborn kids whose mother was not vaccinated before birth.</li>
-                        </ul>
+                        <h3 id="coccidiosis" class="text-lg font-semibold text-slate-800">Coccidiosis</h3>
+                        <p class="mt-1 text-slate-600">A common and potentially deadly parasitic disease in kids, usually between 3 weeks and 5 months of age. It is caused by a protozoa that damages the intestinal lining, causing severe diarrhea (scours). Prevention focuses on keeping pens clean and dry and often involves using medicated feed or water.</p>
+                    </div>
+                     <div>
+                        <h3 id="zinc-deficiency" class="text-lg font-semibold text-slate-800">Zinc Deficiency</h3>
+                        <p class="mt-1 text-slate-600">A mineral deficiency that often occurs when a goat's diet is too high in calcium (e.g., too much alfalfa for non-milking goats), as calcium can inhibit zinc absorption. Symptoms include patchy hair loss (especially on the face and tail), a thick or flaky coat, and sometimes excessive salivating or foaming at the mouth.</p>
                     </div>
                     <div>
-                        <p><strong id="famacha" class="text-slate-800">FAMACHA:</strong> A system for assessing anemia by checking the color of a goat's lower eyelids against a special chart. Pale membranes indicate blood loss, which in goats is most often caused by a heavy infestation of the deadly barber pole worm (*Haemonchus contortus*). This allows for selective deworming of only the animals that need it, which helps combat parasite resistance.</p>
+                        <h3 id="cae" class="text-lg font-semibold text-slate-800">CAE (Caprine Arthritis Encephalitis)</h3>
+                        <p class="mt-1 text-slate-600">A contagious and incurable viral disease, primarily affecting dairy goats. It most commonly appears as arthritis ("big knees") in adult goats but can also cause encephalitis (brain inflammation) in kids. It is primarily spread from doe to kid through colostrum and milk, so prevention relies on heat-treating colostrum and feeding pasteurized milk or replacer.</p>
                     </div>
                     <div>
-                        <p><strong id="coccidiosis" class="text-slate-800">Coccidiosis:</strong> A common and potentially deadly parasitic disease in kids, caused by a protozoa called *coccidia*. It thrives in wet, crowded conditions and damages the intestinal lining, causing severe, often watery or bloody diarrhea (scours). It is a major cause of death in kids between 3 weeks and 5 months of age. Prevention through clean, dry living conditions is critical.</p>
+                        <h3 id="cl" class="text-lg font-semibold text-slate-800">CL (Caseous Lymphadenitis)</h3>
+                        <p class="mt-1 text-slate-600">A chronic, contagious bacterial infection that causes abscesses in the lymph nodes, most commonly around the jaw and neck. The pus from these abscesses is highly infectious to other goats and can live in the soil for years. There is no cure, and prevention involves strict biosecurity and testing.</p>
+                    </div>
+                    <div>
+                        <h3 id="johnes" class="text-lg font-semibold text-slate-800">Johne's Disease</h3>
+                        <p class="mt-1 text-slate-600">A fatal, contagious gastrointestinal disease that causes a slow, progressive wasting away in adult goats. The bacteria is shed by infected animals long before they show symptoms, making it very difficult to control. There is no cure, so prevention relies on buying animals only from herds tested negative for the disease.</p>
+                    </div>
+                    <div>
+                        <h3 id="lgd"><strong class="text-slate-800">LGD:</strong> Livestock Guardian Dog, such as a Great Pyrenees or Anatolian Shepherd.</h3>
                     </div>
                 </div>
             </section>

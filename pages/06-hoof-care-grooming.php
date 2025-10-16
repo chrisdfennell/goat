@@ -1,7 +1,7 @@
 <?php
 $PAGE_TITLE = 'Hoof Care & Grooming • Goat Care Guide';
 $PAGE_SCRIPTS = ['https://cdn.tailwindcss.com'];
-$PAGE_INLINE_JS = ''; // No page-specific JS needed now
+$PAGE_INLINE_JS = '';
 include __DIR__ . '/../includes/header.php';
 ?>
 
@@ -41,7 +41,7 @@ include __DIR__ . '/../includes/header.php';
                             <li><strong>2. Clean the Hoof:</strong> Use a hoof pick or stiff brush to remove all dirt, mud, and manure. You need to see what you are doing.</li>
                             <li><strong>3. Trim the Hoof Wall:</strong> The outer wall of the hoof grows fastest. Carefully trim the overgrown wall down until it is level with the soft sole of the hoof. Make small, conservative cuts.</li>
                             <li><strong>4. Shape the Hoof:</strong> The goal is a flat, level bottom surface for the goat to walk on. Pare away any flaps or pockets on the sole, but be careful not to remove too much.</li>
-                            <li><strong>5. Check for Problems:</strong> As you trim, look for signs of hoof rot (a foul smell, black tissue), scald (redness between the toes), or abscesses.</li>
+                            <li><strong>5. Check for Problems:</strong> As you trim, look for signs of <a href="15-glossary-resources.php#hoof-rot" class="text-emerald-600 hover:underline font-semibold">hoof rot</a> (a foul smell, black tissue), scald (redness between the toes), or abscesses.</li>
                         </ol>
                         <div class="mt-4 bg-amber-50 border-l-4 border-amber-500 text-amber-800 p-4 rounded-r-lg text-sm">
                             <strong>Tip:</strong> If you see pink when trimming the sole, STOP. That is live tissue (the "quick") and cutting it will cause pain and bleeding.
@@ -50,13 +50,18 @@ include __DIR__ . '/../includes/header.php';
                 </div>
             </section>
             <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
-                <h2 class="text-2xl font-bold text-slate-900 mb-4">Common Hoof Problems</h2>
-                <p class="text-slate-600 mb-4">Wet, muddy conditions are the biggest enemy of healthy hooves. Knowing what to look for can help you treat issues before they cause lameness.</p>
-                <ul class="space-y-3 list-disc list-inside text-slate-700">
-                    <li><strong>Hoof Scald:</strong> This is an infection of the skin between the two toes of the hoof. It will look red, raw, and inflamed, and may have a white, pasty discharge. It is often the first stage of hoof rot.</li>
-                    <li><strong>Hoof Rot:</strong> A more advanced infection that involves the hoof itself, not just the skin. It has a distinctly foul, rotten odor and you may see black, necrotic (dead) tissue. Hoof rot can eat away at the sole of the hoof and requires aggressive treatment.</li>
-                    <li><strong>Treatment:</strong> For both conditions, treatment involves trimming away any affected tissue to expose it to air, followed by treatment with a zinc sulfate foot bath or a topical spray like Koppertox. Keeping the goat in a clean, dry area is essential for healing.</li>
-                </ul>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Hoof Rot vs. Hoof Scald</h2>
+                <p class="text-slate-600 mb-4">These two common hoof ailments are often confused, but they have different causes and treatments. Both are more common in wet, muddy conditions.</p>
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="font-semibold text-slate-800">Hoof Scald</h3>
+                        <p class="text-sm text-slate-600">This is a milder infection of the skin between the toes. It will look red, raw, and inflamed, and the goat will likely be limping. It is caused by bacteria that thrive in wet pastures.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-slate-800">Hoof Rot</h3>
+                        <p class="text-sm text-slate-600">This is a more severe, anaerobic bacterial infection that attacks the hoof itself, causing the sole to separate from the hoof wall. It has a distinctly foul odor and you may see black or gray, rotting tissue. It is highly contagious and requires more aggressive treatment, often including antibiotic sprays or foot soaks.</p>
+                    </div>
+                </div>
             </section>
             <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Grooming &amp; Coat Care</h2>

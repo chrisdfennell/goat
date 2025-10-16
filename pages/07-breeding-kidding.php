@@ -1,7 +1,7 @@
 <?php
 $PAGE_TITLE = 'Breeding & Kidding • Goat Care Guide';
 $PAGE_SCRIPTS = ['https://cdn.tailwindcss.com'];
-$PAGE_INLINE_JS = ''; // No page-specific JS needed now
+$PAGE_INLINE_JS = '';
 include __DIR__ . '/../includes/header.php';
 ?>
 
@@ -9,15 +9,15 @@ include __DIR__ . '/../includes/header.php';
 <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
     <div class="max-w-4xl mx-auto">
         <section class="mb-12 text-center">
-            <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 tracking-tight mb-4">Breeding &amp; Kidding</h1>
+            <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 tracking-tight mb-4">Breeding &amp; <a href="15-glossary-resources.php#kidding" class="text-emerald-600 hover:underline font-semibold">Kidding</a></h1>
             <p class="text-lg text-slate-600 max-w-3xl mx-auto">Kidding season is one of the most exciting and nerve-wracking times on a goat farm. Good preparation is key to a successful outcome for both doe and kids.</p>
         </section>
         <div class="space-y-12">
             <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">The Breeding Cycle</h2>
-                <p class="text-slate-600 mb-4">Most dairy goat breeds are seasonal breeders, typically coming into heat in the fall as the days get shorter. Nigerian Dwarfs and some meat breeds can cycle year-round.</p>
+                <p class="text-slate-600 mb-4">Most dairy goat breeds are seasonal breeders, typically coming into <a href="15-glossary-resources.php#heat" class="text-emerald-600 hover:underline font-semibold">heat</a> in the fall as the days get shorter. Nigerian Dwarfs and some meat breeds can cycle year-round.</p>
                 <ul class="space-y-3 list-disc list-inside text-slate-700">
-                    <li><strong>Heat (Estrus):</strong> A doe's heat cycle is about 18-24 days long. The period when she is receptive to a buck, called "standing heat," lasts for 12-48 hours. This is the only time she can get pregnant.</li>
+                    <li><strong>Heat (Estrus):</strong> A <a href="15-glossary-resources.php#doe" class="text-emerald-600 hover:underline font-semibold">doe's</a> heat cycle is about 18-24 days long. The period when she is receptive to a <a href="15-glossary-resources.php#buck" class="text-emerald-600 hover:underline font-semibold">buck</a>, called "standing heat," lasts for 12-48 hours. This is the only time she can get pregnant.</li>
                     <li><strong>Signs of Heat:</strong> Look for vigorous tail flagging (wagging), a swollen and pink vulva, mucous discharge, increased vocalization, fighting with other does, and standing to be mounted by a buck or another doe.</li>
                     <li><strong>Gestation:</strong> The average gestation for a goat is 150 days (about 5 months). Keep careful records of breeding dates to calculate an accurate due date. Use an online goat gestation calculator for a precise estimate.</li>
                 </ul>
@@ -44,7 +44,7 @@ include __DIR__ . '/../includes/header.php';
                     <div class="prose prose-slate max-w-none">
                         <h4>Stages of Labor</h4>
                         <ol class="space-y-2">
-                            <li><strong>Early Labor (12-24 hours before):</strong> Doe may separate herself from the herd, appear restless or anxious, paw at her bedding ("nesting"), or repeatedly look back at her side. Her udder will become very full and tight ("bagging up"), and her tail ligaments on either side of her spine will become very soft and seem to disappear.</li>
+                           <li><strong>Early Labor:</strong> Can last 2-12 hours. The doe will separate from the herd, seem distant or "internal," and may get up and down frequently. She may talk to her belly. The most reliable sign is that her tail ligaments (on either side of her tail) will become very soft and eventually feel like they have disappeared completely.</li>
                             <li><strong>Active Labor:</strong> Forceful pushing begins. You'll see the amniotic sac "bubble." A normal "diving" presentation is two front feet and a nose.</li>
                             <li><strong>Afterbirth:</strong> The doe will pass the placenta within a few hours. Make sure it's all there; a retained placenta can cause infection.</li>
                         </ol>

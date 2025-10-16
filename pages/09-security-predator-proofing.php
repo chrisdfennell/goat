@@ -1,7 +1,7 @@
 <?php
 $PAGE_TITLE = 'Security & Predator-Proofing • Goat Care Guide';
 $PAGE_SCRIPTS = ['https://cdn.tailwindcss.com'];
-$PAGE_INLINE_JS = ''; // No page-specific JS needed now
+$PAGE_INLINE_JS = '';
 include __DIR__ . '/../includes/header.php';
 ?>
 
@@ -72,22 +72,32 @@ include __DIR__ . '/../includes/header.php';
                         <tbody class="divide-y divide-slate-200 text-sm">
                             <tr>
                                 <td class="p-3 font-medium">Livestock Guardian Dog (LGD)</td>
-                                <td class="p-3">Extremely effective, bonds deeply with herd, deters most predators. Active 24/7.</td>
-                                <td class="p-3">Requires extensive training and secure fencing to prevent roaming. Can be prone to barking. Not a pet.</td>
+                                <td class="p-3">Extremely effective against a wide range of predators. Bonds deeply with the herd and is actively protective. Their barking alone is a major deterrent.</td>
+                                <td class="p-3">Requires significant training and socialization from a young age to be reliable. Can be prone to barking or roaming if not properly contained. Represents a significant long-term commitment.</td>
                             </tr>
                             <tr>
                                 <td class="p-3 font-medium">Donkey (Standard or larger)</td>
-                                <td class="p-3">Natural hatred of canines (dogs, coyotes), has a very loud and startling alarm call.</td>
-                                <td class="p-3">Can be aggressive towards goat kids or new animals. May not be effective against non-canine predators like cougars.</td>
+                                <td class="p-3">Natural and aggressive hatred of canines (dogs, coyotes). Their loud bray is an excellent alarm call for the whole farm.</td>
+                                <td class="p-3">Can be overly aggressive towards newborn <a href="15-glossary-resources.php#kid" class="text-emerald-600 hover:underline font-semibold">kids</a> or even the herd's own dogs. Generally only effective against canine threats, not cougars or bears.</td>
                             </tr>
                             <tr>
                                 <td class="p-3 font-medium">Llama</td>
-                                <td class="p-3">Alert, territorial, will charge and stomp threats. Generally quiet and calm with the herd.</td>
-                                <td class="p-3">Requires specific care (shearing, different minerals). May not be as effective against a determined pack of predators.</td>
+                                <td class="p-3">Very alert and territorial. Will emit a startling alarm call and charge, stomp, or spit at threats. Can be effective against single predators.</td>
+                                <td class="p-3">May not be as effective against a determined pack of predators. Requires specialized care different from goats. Some llamas are more interested in grazing than guarding.</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
+            </section>
+            <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Human Security &amp; Theft Prevention</h2>
+                <p class="text-slate-600 mb-4">Unfortunately, animal theft is a real concern, especially for friendly, well-bred goats. It's wise to take some precautions against human threats as well.</p>
+                 <ul class="space-y-3 list-disc list-inside text-slate-700">
+                    <li><strong>Visibility:</strong> Keep your night pen and kidding areas out of easy sight from the main road if possible.</li>
+                    <li><strong>Signage:</strong> Prominently display "Private Property" and "Biosecurity in Effect" signs. This can deter casual visitors and signals that you take your herd's health and security seriously.</li>
+                    <li><strong>Cameras:</strong> Simple, affordable farm or game cameras placed at key access points can be a powerful deterrent and are invaluable for identification if a theft does occur.</li>
+                    <li><strong>Know Your Neighbors:</strong> A strong relationship with your neighbors is one of the best security tools. They can be an extra set of eyes and ears when you are not home.</li>
+                </ul>
             </section>
         </div>
         <div class="flex justify-between items-center pt-12">

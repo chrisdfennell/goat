@@ -4,78 +4,59 @@
  * Contains base styles and variables for the light/dark theme toggle.
  */
 
-html {
-  overflow-x: hidden; /* Prevent horizontal scrollbars from background animation */
-}
-
 body {
   font-family: 'Inter', sans-serif;
-  position: relative; /* Needed for the ::before and ::after pseudo-elements */
+  overflow-x: hidden; /* Prevent horizontal scroll from animation */
 }
 
-/* Animated background styles - using two layers for a dynamic effect */
-body::before,
-body::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 120%; /* Make wider to accommodate diagonal movement */
-  height: 200%; /* Taller than viewport to allow scrolling */
-  z-index: -1;
-  background-image: url('../site/assets/goat.svg');
-  background-repeat: repeat;
-  background-size: 150px; /* Adjust size of the goat pattern */
-  opacity: 0.04; /* Make it very faint */
+html {
+  overflow-x: hidden;
 }
-
-/* First layer of goats, scrolling up and to the right */
-body::before {
-  left: -10%;
-  animation: scroll-L-to-R 80s linear infinite;
-}
-
-/* Second, fainter layer, scrolling up and to the left */
-body::after {
-  left: -10%;
-  top: -100%; /* Start halfway through the animation loop to offset them */
-  animation: scroll-R-to-L 85s linear infinite;
-  opacity: 0.025;
-}
-
-/* Dark mode adjustment for the background */
-html[data-theme="dark"] body::before,
-html[data-theme="dark"] body::after {
-    opacity: 0.02;
-    filter: invert(1);
-}
-
-/* Keyframes for the first layer (drifting right) */
-@keyframes scroll-L-to-R {
-  from {
-    transform: translate(0%, 0%);
-  }
-  to {
-    transform: translate(15%, -50%); /* Scrolls up and to the right */
-  }
-}
-
-/* Keyframes for the second layer (drifting left) */
-@keyframes scroll-R-to-L {
-  from {
-    transform: translate(15%, 0%);
-  }
-  to {
-    transform: translate(0%, -50%); /* Scrolls up and to the left */
-  }
-}
-
 
 .hero-bg {
   background-image: url('../site/assets/two-goats.jpg');
   background-size: cover;
   background-position: center;
 }
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../site/assets/goat.svg');
+  background-repeat: repeat;
+  background-size: 150px;
+  opacity: 0.03;
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::before {
+    animation: scroll-left 180s linear infinite;
+}
+
+body::after {
+    background-image: url('../site/assets/goat.svg');
+    background-size: 250px;
+    opacity: 0.02;
+    animation: scroll-right 240s linear infinite;
+}
+
+
+@keyframes scroll-left {
+  0% { background-position: 0 0; }
+  100% { background-position: 2000px -2000px; }
+}
+
+@keyframes scroll-right {
+  0% { background-position: 0 0; }
+  100% { background-position: -2000px 2000px; }
+}
+
 
 /* Enable light and dark theme variants */
 :root {
@@ -106,10 +87,6 @@ html[data-theme="dark"] .dark\:invert {
 }
 
 @media print {
-    body::before,
-    body::after {
-        display: none; /* Hide animated background when printing */
-    }
     .no-print {
         display: none !important;
     }
@@ -118,4 +95,23 @@ html[data-theme="dark"] .dark\:invert {
         box-shadow: none !important;
         border: 1px solid #ccc !important;
     }
+}
+
+/* Fix for calculator inputs in dark mode */
+html[data-theme="dark"] .calculator-input,
+html[data-theme="dark"] .dark-mode-readable,
+html[data-theme="dark"] .dark-mode-readable td,
+html[data-theme="dark"] .dark-mode-readable strong {
+    background-color: #ffffff;
+    color: #1e293b !important; /* Use !important to override tailwind's specificity */
+}
+
+html[data-theme="dark"] .dark-mode-readable input[type="checkbox"] {
+    filter: invert(1);
+}
+
+
+/* Make date picker icon visible in dark mode on WebKit browsers */
+html[data-theme="dark"] .calculator-input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
 }

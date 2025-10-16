@@ -126,15 +126,15 @@ include __DIR__ . '/../includes/header.php';
                         <form class="space-y-4" id="form-hwm" onsubmit="return false">
                             <div>
                                 <label class="block text-sm font-medium text-slate-700" for="adults">Adults (maintenance)</label>
-                                <input class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm" id="adults" min="0" step="1" type="number" value="2" />
+                                <input class="calculator-input mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm" id="adults" min="0" step="1" type="number" value="2" />
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-slate-700" for="milkers">Milking Does</label>
-                                <input class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm" id="milkers" min="0" step="1" type="number" value="1" />
+                                <input class="calculator-input mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm" id="milkers" min="0" step="1" type="number" value="1" />
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-slate-700" for="kids">Kids (&lt; 6 months)</label>
-                                <input class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm" id="kids" min="0" step="1" type="number" value="0" />
+                                <input class="calculator-input mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm" id="kids" min="0" step="1" type="number" value="0" />
                             </div>
                         </form>
                     </div>
@@ -148,6 +148,10 @@ include __DIR__ . '/../includes/header.php';
                         <p class="text-xs text-slate-500 mt-4" id="out1Notes">Enter your herd numbers to calculate.</p>
                     </div>
                 </div>
+                 <div class="mt-6 text-sm text-slate-600 space-y-2">
+                    <p><strong>Note on Hay:</strong> This estimate assumes goats get 3-4% of their body weight in hay daily. Milkers need more energy and thus more hay. Always adjust based on your hay's quality and your goats' <a href="15-glossary-resources.php#bcs" class="text-emerald-600 hover:underline font-semibold">Body Condition Score (BCS)</a>. If they are getting too thin, increase their feed; if they are getting fat, reduce it.</p>
+                    <p><strong>Note on Water:</strong> Water is the most critical nutrient. A milking doe's needs can easily double in hot weather. Always provide fresh, clean, cool water.</p>
+                </div>
             </section>
             <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200" id="kidding-calculator">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Kidding Date Calculator</h2>
@@ -156,11 +160,11 @@ include __DIR__ . '/../includes/header.php';
                         <form class="space-y-4" id="form-kidding" onsubmit="return false">
                             <div>
                                 <label class="block text-sm font-medium text-slate-700" for="breeding_date">Breeding Date</label>
-                                <input class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm" id="breeding_date" type="date" />
+                                <input class="calculator-input mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm" id="breeding_date" type="date" />
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-slate-700" for="gestation_days">Gestation Length (days)</label>
-                                <input class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm" id="gestation_days" max="160" min="140" type="number" value="150" />
+                                <input class="calculator-input mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm" id="gestation_days" max="160" min="140" type="number" value="150" />
                             </div>
                         </form>
                     </div>
@@ -169,6 +173,9 @@ include __DIR__ . '/../includes/header.php';
                         <p class="text-xl font-bold text-emerald-700" id="due_date_output">—</p>
                         <p class="text-xs text-slate-500 mt-2">Standard gestation is 145-155 days. Miniatures are often closer to 145.</p>
                     </div>
+                </div>
+                <div class="mt-6 text-sm text-slate-600 space-y-2">
+                    <p><strong>Why the range?</strong> Gestation length can vary. Miniature breeds like Nigerian Dwarfs often have slightly shorter gestations (around 145 days), while larger standard breeds may go closer to 155 days. First-time mothers may also kid a few days earlier or later than seasoned does.</p>
                 </div>
             </section>
             <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200" id="weight-estimator">
@@ -179,7 +186,7 @@ include __DIR__ . '/../includes/header.php';
                         <form id="form-weight" onsubmit="return false">
                             <div>
                                 <label class="block text-sm font-medium text-slate-700" for="heart_girth">Heart Girth (inches)</label>
-                                <input class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm" id="heart_girth" min="10" step="0.5" type="number" />
+                                <input class="calculator-input mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm" id="heart_girth" min="10" step="0.5" type="number" />
                             </div>
                         </form>
                     </div>
@@ -188,6 +195,9 @@ include __DIR__ . '/../includes/header.php';
                         <p class="text-xl font-bold text-emerald-700" id="weight_output">— lbs</p>
                         <p class="text-xs text-slate-500 mt-2">This formula is an approximation and can vary by breed and condition.</p>
                     </div>
+                </div>
+                 <div class="mt-6 bg-amber-50 border-l-4 border-amber-500 text-amber-900 p-4 rounded-r-lg text-sm">
+                    <strong class="font-semibold">Disclaimer:</strong> Weight tapes and girth formulas are notoriously inaccurate for goats. They can easily be off by 20% or more depending on the goat's build, pregnancy status, or if they have a full <a href="15-glossary-resources.php#rumen" class="text-emerald-600 hover:underline font-semibold">rumen</a>. Use this only as a last resort. For accurate medication dosing, a livestock or bathroom scale is the best and safest tool.
                 </div>
             </section>
         </div>

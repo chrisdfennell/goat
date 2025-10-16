@@ -1,11 +1,7 @@
 <?php
 $PAGE_TITLE = 'Seasonal Care • Goat Care Guide';
 $PAGE_SCRIPTS = ['https://cdn.tailwindcss.com'];
-$PAGE_INLINE_JS = <<<HTML
-<script>
-
-</script>
-HTML;
+$PAGE_INLINE_JS = '';
 include __DIR__ . '/../includes/header.php';
 ?>
 
@@ -23,10 +19,9 @@ include __DIR__ . '/../includes/header.php';
                     <div>
                         <p class="text-slate-600 mb-4">The primary goals for winter are to keep goats warm, dry, and well-fed, as they burn extra calories to maintain body temperature.</p>
                         <ul class="space-y-3 list-disc list-inside text-slate-700">
-                            <li><strong>Shelter:</strong> Ensure the barn is draft-free at goat level but well-ventilated up high. Goats do <strong>not</strong> need a heated or insulated barn; their cashmere undercoats and huddling behavior keep them warm. A tightly sealed barn can trap ammonia, leading to dangerous respiratory damage before you can even smell it.</li>
-                            <li><strong>Bedding:</strong> Use a deep litter method with straw, which is much warmer and offers better insulation from the cold ground than wood shavings.</li>
+                            <li><strong>Shelter:</strong> Ensure the barn is draft-free at goat level. Use a deep litter bedding method with straw or pine shavings to generate compost heat.</li>
                             <li><strong>Water:</strong> Use heated buckets or a tank de-icer. Goats will not drink enough if their water is icy, which can lead to dehydration and other health issues.</li>
-                            <li><strong>Feed:</strong> Increase hay rations, especially for pregnant does. Monitor Body Condition Score (BCS) to ensure they aren't losing weight.</li>
+                            <li><strong>Feed:</strong> Increase hay rations, especially for pregnant <a href="15-glossary-resources.php#doe" class="text-emerald-600 hover:underline font-semibold">does</a>. Monitor Body Condition Score (BCS) to ensure they aren't losing weight.</li>
                             <li><strong>Health:</strong> Watch for signs of respiratory illness (coughing, runny nose). Check for external parasites like lice, which thrive in winter coats.</li>
                         </ul>
                     </div>
@@ -34,14 +29,18 @@ include __DIR__ . '/../includes/header.php';
                         <img alt="Goats resting comfortably in a barn with deep, clean straw bedding during winter." class="rounded-lg shadow-sm" src="<?= e($REL) ?>assets/site/assets/goat-in-winter-bedding.jpg" />
                     </div>
                 </div>
+                 <div class="mt-6 bg-blue-50 border-l-4 border-blue-500 text-blue-900 p-4 rounded-r-lg text-sm">
+                    <strong class="font-semibold">Why No Heat Lamps?</strong>
+                    <p class="mt-1">Goats do NOT need a heated or insulated shelter. They stay warm by growing a thick undercoat of cashmere and cuddling together. An insulated barn can trap ammonia from urine to dangerous levels before a human can even smell it, causing severe lung damage. Good ventilation and dry bedding are far more important and safer than heat.</p>
+                </div>
             </section>
             <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Spring Checklist</h2>
                 <p class="text-slate-600 mb-4">Spring brings new life, lush pasture, and the peak season for parasites.</p>
                 <ul class="space-y-3 list-disc list-inside text-slate-700">
-                    <li><strong>Kidding Season:</strong> Be prepared with a clean kidding stall and your emergency kit. This is the busiest time of year!</li>
-                    <li><strong>Pasture Management:</strong> Introduce goats to lush spring grass gradually over a week to prevent bloat. Start with just an hour of grazing per day.</li>
-                    <li><strong>Parasite Patrol:</strong> Worm larvae thrive in the cool, moist conditions of spring. Begin regular FAMACHA checks and plan to run fecal tests to stay ahead of parasite loads.</li>
+                    <li><strong><a href="15-glossary-resources.php#kidding" class="text-emerald-600 hover:underline font-semibold">Kidding</a> Season:</strong> Be prepared with a clean kidding stall and your emergency kit. This is the busiest time of year!</li>
+                    <li><strong>Pasture Management:</strong> Introduce goats to lush spring grass gradually over a week to prevent bloat. Start with just an hour of grazing per day. Always provide free-choice baking soda to help them regulate their <a href="15-glossary-resources.php#rumen" class="text-emerald-600 hover:underline font-semibold">rumen</a> pH and prevent acidosis.</li>
+                    <li><strong>Parasite Patrol:</strong> Worm larvae thrive in the cool, moist conditions of spring. Begin regular <a href="15-glossary-resources.php#famacha" class="text-emerald-600 hover:underline font-semibold">FAMACHA</a> checks and plan to run fecal tests to stay ahead of parasite loads.</li>
                     <li><strong>Hoof Trimming:</strong> Soft, wet ground means hooves won't wear down naturally. Schedule a herd-wide trim.</li>
                 </ul>
             </section>
@@ -65,7 +64,7 @@ include __DIR__ . '/../includes/header.php';
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Fall Checklist</h2>
                 <p class="text-slate-600 mb-4">As the days shorten, the focus shifts to breeding season and preparing for the coming winter.</p>
                 <ul class="space-y-3 list-disc list-inside text-slate-700">
-                    <li><strong>Breeding Season (The Rut):</strong> Does will come into heat and bucks will be in full rut. Plan your breedings and keep meticulous records of dates.</li>
+                    <li><strong>Breeding Season (The Rut):</strong> <a href="15-glossary-resources.php#doe" class="text-emerald-600 hover:underline font-semibold">Does</a> will come into <a href="15-glossary-resources.php#heat" class="text-emerald-600 hover:underline font-semibold">heat</a> and <a href="15-glossary-resources.php#buck" class="text-emerald-600 hover:underline font-semibold">bucks</a> will be in full rut. Plan your breedings and keep meticulous records of dates.</li>
                     <li><strong>Health Checks:</strong> Perform a final herd health check before winter sets in. Check body condition, perform FAMACHA scores, and deworm if necessary.</li>
                     <li><strong>Barn Prep:</strong> Inspect the barn and fencing for any needed repairs. Stock up on hay and bedding for the winter months.</li>
                 </ul>

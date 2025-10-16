@@ -73,14 +73,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         checklists.forEach(section => {
             const title = section.querySelector('h2').innerText;
-            const items = section.querySelectorAll('li.checklist-item'); // Target only checklist items
+            const items = section.querySelectorAll('li');
             const bodyData = [];
 
             items.forEach(item => {
                 const checkbox = item.querySelector('input[type="checkbox"]');
                 // Use the textContent of the parent label to get the full text
                 const label = item.querySelector('label') ? item.querySelector('label').textContent.trim() : item.textContent.trim();
-                const status = checkbox && checkbox.checked ? '✓' : '☐'; // Using Unicode characters for checkboxes
+                const status = checkbox && checkbox.checked ? '[ x ]' : '[   ]';
                 bodyData.push([status, label]);
             });
 
@@ -126,29 +126,24 @@ include __DIR__ . '/../includes/header.php';
             </div>
         </section>
         <div class="space-y-12" id="checklist-container">
-             <section class="checklist-section bg-white p-6 rounded-lg shadow-md border border-slate-200">
+            <section class="checklist-section bg-white p-6 rounded-lg shadow-md border border-slate-200">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Initial Barn & Supply Setup</h2>
-                <p class="text-slate-600 mb-4">Have these items ready *before* you bring your first goats home to ensure a smooth transition.</p>
-                <div class="grid md:grid-cols-2 gap-x-8 gap-y-4">
-                    <ul class="space-y-3">
-                        <h3 class="font-semibold text-lg text-slate-800">Shelter & Fencing</h3>
-                        <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Secure, draft-free shelter (at least 15 sq ft per goat)</label></li>
-                        <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Goat-proof fencing (min. 4 ft high) and secure gates</label></li>
-                        <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Bedding material (straw or pine shavings)</label></li>
-                    </ul>
-                    <ul class="space-y-3">
-                        <h3 class="font-semibold text-lg text-slate-800">Feeding & Water</h3>
-                         <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Sturdy hay feeder (wall-mounted or trough)</label></li>
-                        <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Two heavy-duty water buckets or a trough</label></li>
-                        <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Covered mineral feeder (for loose minerals)</label></li>
-                        <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Bag of loose goat minerals</label></li>
-                        <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Bale of good quality grass hay</label></li>
-                    </ul>
-                </div>
+                <ul class="space-y-3 dark-mode-readable">
+                    <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Secure, predator-proof fencing & gates</label></li>
+                    <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Draft-free, dry shelter (15-20 sq ft per goat)</label></li>
+                    <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Sturdy hay feeder (off the ground)</label></li>
+                    <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Water buckets or trough</label></li>
+                    <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Covered loose mineral feeder</label></li>
+                    <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Grass Hay (at least 2-3 bales to start)</label></li>
+                    <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Goat-specific loose minerals</label></li>
+                    <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Loose baking soda</label></li>
+                    <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Straw or pine shavings for bedding</label></li>
+                    <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Small bag of same grain from breeder (for transition)</label></li>
+                </ul>
             </section>
             <section class="checklist-section bg-white p-6 rounded-lg shadow-md border border-slate-200">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Daily &amp; Weekly Chores</h2>
-                <div class="grid md:grid-cols-2 gap-8">
+                <div class="grid md:grid-cols-2 gap-8 dark-mode-readable">
                     <div>
                         <h3 class="font-semibold text-lg text-slate-800 mb-3">Daily Tasks</h3>
                         <ul class="space-y-3">
@@ -175,7 +170,7 @@ include __DIR__ . '/../includes/header.php';
             <section class="checklist-section bg-white p-6 rounded-lg shadow-md border border-slate-200">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Goat First-Aid Kit Checklist</h2>
                 <p class="text-slate-600 mb-4">Assemble this kit in a waterproof, clearly labeled tote and keep it in a clean, accessible location.</p>
-                <div class="grid md:grid-cols-2 gap-x-8 gap-y-4">
+                <div class="grid md:grid-cols-2 gap-x-8 gap-y-4 dark-mode-readable">
                     <ul class="space-y-3">
                         <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Digital Thermometer</label></li>
                         <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Stethoscope</label></li>
@@ -195,10 +190,32 @@ include __DIR__ . '/../includes/header.php';
                     </ul>
                 </div>
             </section>
+             <section class="checklist-section bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">First 24 Hours of a New Kid's Life</h2>
+                <p class="text-slate-600 mb-4">A checklist for the critical first day after birth.</p>
+                <div class="grid md:grid-cols-2 gap-x-8 gap-y-4 dark-mode-readable">
+                    <ul class="space-y-3">
+                        <h3 class="font-semibold text-lg text-slate-800">Immediate Post-Birth</h3>
+                        <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Clear airway (nose/mouth) of fluid.</label></li>
+                        <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Dry kid vigorously with a clean towel.</label></li>
+                        <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Dip umbilical cord/navel in 7% iodine.</label></li>
+                        <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Ensure kid stands and nurses within the first hour.</label></li>
+                         <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Get a birth weight.</label></li>
+                    </ul>
+                    <ul class="space-y-3">
+                        <h3 class="font-semibold text-lg text-slate-800">Within 24 Hours</h3>
+                        <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Confirm doe has passed the afterbirth (placenta).</label></li>
+                        <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Check that kids are passing meconium (first black, tarry poop).</label></li>
+                        <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Give Selenium/Vit E supplement (if in a deficient area).</label></li>
+                        <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Ensure kids are bonding with dam and nursing regularly.</label></li>
+                        <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Record all births, weights, and sexes in your records.</label></li>
+                    </ul>
+                </div>
+            </section>
             <section class="checklist-section bg-white p-6 rounded-lg shadow-md border border-slate-200">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Kidding Kit Checklist</h2>
                 <p class="text-slate-600 mb-4">Have this kit ready at least two weeks before your first doe is due.</p>
-                <div class="grid md:grid-cols-2 gap-x-8 gap-y-4">
+                <div class="grid md:grid-cols-2 gap-x-8 gap-y-4 dark-mode-readable">
                     <ul class="space-y-3">
                         <h3 class="font-semibold text-lg text-slate-800">For the Birth</h3>
                         <li class="checklist-item"><label class="flex items-center"><input type="checkbox" /> Old Towels (lots of them!)</label></li>

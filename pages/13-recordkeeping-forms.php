@@ -50,75 +50,61 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             },
             didParseCell: function(data) {
-                // Check if the raw element and its classList exist before using them
                 if (data.row && data.row.raw && data.row.raw.classList && data.row.raw.classList.contains('h-4')) {
-                    data.cell.styles.fillColor = [100, 116, 139]; // A dark slate color
-                    data.cell.text = ''; // Ensure no text is rendered in the separator
+                    data.cell.styles.fillColor = [100, 116, 139];
+                    data.cell.text = '';
                 }
             }
         });
         finalY = doc.lastAutoTable.finalY + 10;
-        if (finalY > 180) {
-            doc.addPage();
-            finalY = 20;
-        }
+        
+        const newPageCheck = () => {
+            if (finalY > 180) {
+                doc.addPage();
+                finalY = 20;
+            }
+        };
 
+        newPageCheck();
 
         // --- Health & Medical Log ---
         doc.setFontSize(12);
         doc.text("Health & Medical Log", 14, finalY);
         finalY += 5;
-        doc.autoTable({
-            ...tableStyles,
-            html: '#medical-log-table',
-            startY: finalY,
-        });
+        doc.autoTable({ ...tableStyles, html: '#medical-log-table', startY: finalY });
         finalY = doc.lastAutoTable.finalY + 10;
-        if (finalY > 180) {
-            doc.addPage();
-            finalY = 20;
-        }
-        
+        newPageCheck();
+
         // --- Hoof Trimming & Health Checks ---
         doc.setFontSize(12);
         doc.text("Hoof Trimming & Health Checks", 14, finalY);
         finalY += 5;
-        doc.autoTable({
-            ...tableStyles,
-            html: '#hoof-health-log-table',
-            startY: finalY,
-        });
+        doc.autoTable({ ...tableStyles, html: '#hoof-log-table', startY: finalY });
         finalY = doc.lastAutoTable.finalY + 10;
-        if (finalY > 180) {
-            doc.addPage();
-            finalY = 20;
-        }
-
+        newPageCheck();
 
         // --- Breeding & Kidding Log ---
         doc.setFontSize(12);
         doc.text("Breeding & Kidding Log", 14, finalY);
         finalY += 5;
-        doc.autoTable({
-            ...tableStyles,
-            html: '#breed-kid-log-table',
-            startY: finalY,
-        });
+        doc.autoTable({ ...tableStyles, html: '#breed-kid-log-table', startY: finalY });
         finalY = doc.lastAutoTable.finalY + 10;
-        if (finalY > 180) {
-            doc.addPage();
-            finalY = 20;
-        }
+        newPageCheck();
 
         // --- Milk Production Log ---
         doc.setFontSize(12);
         doc.text("Milk Production Log", 14, finalY);
         finalY += 5;
-        doc.autoTable({
-            ...tableStyles,
-            html: '#milk-log-table',
-            startY: finalY,
-        });
+        doc.autoTable({ ...tableStyles, html: '#milk-log-table', startY: finalY });
+        finalY = doc.lastAutoTable.finalY + 10;
+        newPageCheck();
+
+        // --- Goat Sales Record ---
+        doc.setFontSize(12);
+        doc.text("Goat Sales Record", 14, finalY);
+        finalY += 5;
+        doc.autoTable({ ...tableStyles, html: '#sales-log-table', startY: finalY });
+
 
         doc.save('goat-record-forms.pdf');
     }
@@ -207,61 +193,24 @@ include __DIR__ . '/../includes/header.php';
                             </tr>
                         </thead>
                         <tbody data-key="individual-goat-log" id="individual-goat-log-body">
-                            <!-- Initial rows are templates -->
+                            <!-- Template Row -->
                             <tr class="goat-record-entry divide-y divide-slate-200" contenteditable="true">
-                                <td class="p-2 font-semibold w-1/4 bg-slate-50">Goat Name / ID:</td>
-                                <td class="p-2"></td>
+                                <td class="p-2 font-semibold w-1/4 bg-slate-50">Goat Name / ID:</td><td class="p-2"></td>
                             </tr>
-                            <tr contenteditable="true">
-                                <td class="p-2 font-semibold w-1/4 bg-slate-50">Breed:</td>
-                                <td class="p-2"></td>
-                            </tr>
-                            <tr contenteditable="true">
-                                <td class="p-2 font-semibold w-1/4 bg-slate-50">Date of Birth:</td>
-                                <td class="p-2"></td>
-                            </tr>
-                            <tr contenteditable="true">
-                                <td class="p-2 font-semibold w-1/4 bg-slate-50">Dam (Mother):</td>
-                                <td class="p-2"></td>
-                            </tr>
-                            <tr contenteditable="true">
-                                <td class="p-2 font-semibold w-1/4 bg-slate-50">Sire (Father):</td>
-                                <td class="p-2"></td>
-                            </tr>
-                            <tr contenteditable="true">
-                                <td class="p-2 font-semibold w-1/4 bg-slate-50">Notes (markings, etc):</td>
-                                <td class="p-2"></td>
-                            </tr>
-                            <tr class="h-4 bg-slate-200">
-                                <td colspan="2"></td>
-                            </tr>
+                            <tr contenteditable="true"><td class="p-2 font-semibold w-1/4 bg-slate-50">Breed:</td><td class="p-2"></td></tr>
+                            <tr contenteditable="true"><td class="p-2 font-semibold w-1/4 bg-slate-50">Date of Birth:</td><td class="p-2"></td></tr>
+                            <tr contenteditable="true"><td class="p-2 font-semibold w-1/4 bg-slate-50"><a href="15-glossary-resources.php#dam" class="text-emerald-600 hover:underline font-semibold">Dam</a> (Mother):</td><td class="p-2"></td></tr>
+                            <tr contenteditable="true"><td class="p-2 font-semibold w-1/4 bg-slate-50"><a href="15-glossary-resources.php#sire" class="text-emerald-600 hover:underline font-semibold">Sire</a> (Father):</td><td class="p-2"></td></tr>
+                            <tr contenteditable="true"><td class="p-2 font-semibold w-1/4 bg-slate-50">Notes (markings, etc):</td><td class="p-2"></td></tr>
+                            <tr class="h-4 bg-slate-200"><td colspan="2"></td></tr>
                             <tr class="goat-record-entry divide-y divide-slate-200" contenteditable="true">
-                                <td class="p-2 font-semibold w-1/4 bg-slate-50">Goat Name / ID:</td>
-                                <td class="p-2"></td>
+                                <td class="p-2 font-semibold w-1/4 bg-slate-50">Goat Name / ID:</td><td class="p-2"></td>
                             </tr>
-                            <tr contenteditable="true">
-                                <td class="p-2 font-semibold w-1/4 bg-slate-50">Breed:</td>
-                                <td class="p-2"></td>
-                            </tr>
-                            <tr contenteditable="true">
-                                <td class="p-2 font-semibold w-1/4 bg-slate-50">Date of Birth:</td>
-                                <td class="p-2"></td>
-                            </tr>
-                            <tr contenteditable="true">
-                                <td class="p-2 font-semibold w-1/4 bg-slate-50">Dam (Mother):</td>
-                                <td class="p-2"></td>
-                            </tr>
-                            <tr contenteditable="true">
-                                <td class="p-2 font-semibold w-1/4 bg-slate-50">Sire (Father):</td>
-                                <td class="p-2"></td>
-                            </tr>
-                            <tr contenteditable="true">
-                                <td class="p-2 font-semibold w-1/4 bg-slate-50">Notes (markings, etc):</td>
-                                <td class="p-2"></td>
-                            </tr>
-                            <tr class="h-4 bg-slate-200">
-                                <td colspan="2"></td>
-                            </tr>
+                            <tr contenteditable="true"><td class="p-2 font-semibold w-1/4 bg-slate-50">Breed:</td><td class="p-2"></td></tr>
+                            <tr contenteditable="true"><td class="p-2 font-semibold w-1/4 bg-slate-50">Date of Birth:</td><td class="p-2"></td></tr>
+                            <tr contenteditable="true"><td class="p-2 font-semibold w-1/4 bg-slate-50">Dam (Mother):</td><td class="p-2"></td></tr>
+                            <tr contenteditable="true"><td class="p-2 font-semibold w-1/4 bg-slate-50">Sire (Father):</td><td class="p-2"></td></tr>
+                            <tr contenteditable="true"><td class="p-2 font-semibold w-1/4 bg-slate-50">Notes (markings, etc):</td><td class="p-2"></td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -275,85 +224,31 @@ include __DIR__ . '/../includes/header.php';
                     <table class="w-full min-w-[800px] text-sm text-left" id="medical-log-table">
                         <thead class="bg-slate-100">
                             <tr>
-                                <th class="p-2 font-semibold">Date</th>
-                                <th class="p-2 font-semibold">Goat ID</th>
-                                <th class="p-2 font-semibold">Weight</th>
-                                <th class="p-2 font-semibold">Treatment/Vaccine</th>
-                                <th class="p-2 font-semibold">Dose</th>
-                                <th class="p-2 font-semibold">Notes (FAMACHA, Temp, etc)</th>
+                                <th class="p-2 font-semibold">Date</th><th class="p-2 font-semibold">Goat ID</th><th class="p-2 font-semibold">Weight</th><th class="p-2 font-semibold">Treatment/Vaccine</th><th class="p-2 font-semibold">Dose</th><th class="p-2 font-semibold">Notes (FAMACHA, Temp, etc)</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-slate-200" contenteditable="true" data-key="medical-log" id="medical-log-body">
-                            <tr>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                            </tr>
-                            <tr>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                            </tr>
-                            <tr>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                            </tr>
+                            <tr><td class="p-2 h-8"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td></tr>
+                            <tr><td class="p-2 h-8"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td></tr>
                         </tbody>
                     </table>
                 </div>
             </section>
-             <section>
+            <section>
                 <div class="flex justify-between items-center mb-4 border-b pb-2">
                     <h2 class="text-2xl font-bold text-slate-900">Hoof Trimming &amp; Health Checks</h2>
-                    <button class="add-row-btn no-print text-sm bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold py-1 px-3 rounded-md" data-table-body-id="hoof-health-log-body">Add Row</button>
+                    <button class="add-row-btn no-print text-sm bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold py-1 px-3 rounded-md" data-table-body-id="hoof-log-body">Add Row</button>
                 </div>
                 <div class="bg-white p-4 rounded-lg shadow-md border border-slate-200 overflow-x-auto">
-                    <table class="w-full min-w-[800px] text-sm text-left" id="hoof-health-log-table">
+                    <table class="w-full min-w-[800px] text-sm text-left" id="hoof-log-table">
                         <thead class="bg-slate-100">
                             <tr>
-                                <th class="p-2 font-semibold">Date</th>
-                                <th class="p-2 font-semibold">Goat ID</th>
-                                <th class="p-2 font-semibold">Hoof Condition (Good/Fair/Poor)</th>
-                                <th class="p-2 font-semibold">FAMACHA Score</th>
-                                <th class="p-2 font-semibold">Body Condition Score (1-5)</th>
-                                <th class="p-2 font-semibold">Notes</th>
+                                <th class="p-2 font-semibold">Date</th><th class="p-2 font-semibold">Goat ID</th><th class="p-2 font-semibold">Hoof Trim Done?</th><th class="p-2 font-semibold"><a href="15-glossary-resources.php#famacha" class="text-emerald-600 hover:underline font-semibold">FAMACHA</a> Score</th><th class="p-2 font-semibold">Body Condition Score (1-5)</th><th class="p-2 font-semibold">Notes</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-slate-200" contenteditable="true" data-key="hoof-health-log" id="hoof-health-log-body">
-                            <tr>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                            </tr>
-                            <tr>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                            </tr>
-                             <tr>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                            </tr>
+                        <tbody class="divide-y divide-slate-200" contenteditable="true" data-key="hoof-log" id="hoof-log-body">
+                           <tr><td class="p-2 h-8"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td></tr>
+                           <tr><td class="p-2 h-8"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -367,34 +262,12 @@ include __DIR__ . '/../includes/header.php';
                     <table class="w-full min-w-[900px] text-sm text-left" id="breed-kid-log-table">
                         <thead class="bg-slate-100">
                             <tr>
-                                <th class="p-2 font-semibold">Doe</th>
-                                <th class="p-2 font-semibold">Buck</th>
-                                <th class="p-2 font-semibold">Breeding Date</th>
-                                <th class="p-2 font-semibold">Est. Due Date</th>
-                                <th class="p-2 font-semibold">Actual Kidding Date</th>
-                                <th class="p-2 font-semibold">Kids (M/F, Names, Weight)</th>
-                                <th class="p-2 font-semibold">Notes (Easy/Difficult Birth, etc)</th>
+                                <th class="p-2 font-semibold"><a href="15-glossary-resources.php#doe" class="text-emerald-600 hover:underline font-semibold">Doe</a></th><th class="p-2 font-semibold"><a href="15-glossary-resources.php#buck" class="text-emerald-600 hover:underline font-semibold">Buck</a></th><th class="p-2 font-semibold">Breeding Date</th><th class="p-2 font-semibold">Est. Due Date</th><th class="p-2 font-semibold">Actual Kidding Date</th><th class="p-2 font-semibold">Kids (M/F, Names, Weight)</th><th class="p-2 font-semibold">Notes</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-slate-200" contenteditable="true" data-key="breed-kid-log" id="breed-kid-log-body">
-                            <tr>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                            </tr>
-                            <tr>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                            </tr>
+                            <tr><td class="p-2 h-8"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td></tr>
+                            <tr><td class="p-2 h-8"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -408,31 +281,31 @@ include __DIR__ . '/../includes/header.php';
                     <table class="w-full min-w-[600px] text-sm text-left" id="milk-log-table">
                         <thead class="bg-slate-100">
                             <tr>
-                                <th class="p-2 font-semibold">Date</th>
-                                <th class="p-2 font-semibold">Doe Name</th>
-                                <th class="p-2 font-semibold">AM Milk (lbs/oz)</th>
-                                <th class="p-2 font-semibold">PM Milk (lbs/oz)</th>
-                                <th class="p-2 font-semibold">Daily Total</th>
-                                <th class="p-2 font-semibold">Notes (Feed changes, taste, etc)</th>
+                                <th class="p-2 font-semibold">Date</th><th class="p-2 font-semibold">Doe Name</th><th class="p-2 font-semibold">AM Milk (lbs/oz)</th><th class="p-2 font-semibold">PM Milk (lbs/oz)</th><th class="p-2 font-semibold">Daily Total</th><th class="p-2 font-semibold">Notes</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-slate-200" contenteditable="true" data-key="milk-log" id="milk-log-body">
+                           <tr><td class="p-2 h-8"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td></tr>
+                           <tr><td class="p-2 h-8"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+             <section>
+                <div class="flex justify-between items-center mb-4 border-b pb-2">
+                    <h2 class="text-2xl font-bold text-slate-900">Goat Sales Record</h2>
+                    <button class="add-row-btn no-print text-sm bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold py-1 px-3 rounded-md" data-table-body-id="sales-log-body">Add Row</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md border border-slate-200 overflow-x-auto">
+                    <table class="w-full min-w-[900px] text-sm text-left" id="sales-log-table">
+                        <thead class="bg-slate-100">
                             <tr>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
+                                <th class="p-2 font-semibold">Date Sold</th><th class="p-2 font-semibold">Animal ID/Name</th><th class="p-2 font-semibold">DOB</th><th class="p-2 font-semibold">Sire</th><th class="p-2 font-semibold">Dam</th><th class="p-2 font-semibold">Sold To (Name, Phone, Address)</th><th class="p-2 font-semibold">Price</th>
                             </tr>
-                            <tr>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                                <td class="p-2"></td>
-                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200" contenteditable="true" data-key="sales-log" id="sales-log-body">
+                           <tr><td class="p-2 h-8"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td></tr>
+                           <tr><td class="p-2 h-8"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td><td class="p-2"></td></tr>
                         </tbody>
                     </table>
                 </div>

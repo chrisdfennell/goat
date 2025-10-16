@@ -1,7 +1,7 @@
 <?php
 $PAGE_TITLE = 'Bottle-Feeding & Kid Care • Goat Care Guide';
 $PAGE_SCRIPTS = ['https://cdn.tailwindcss.com'];
-$PAGE_INLINE_JS = ''; // No page-specific JS needed now
+$PAGE_INLINE_JS = '';
 include __DIR__ . '/../includes/header.php';
 ?>
 
@@ -17,7 +17,7 @@ include __DIR__ . '/../includes/header.php';
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">The Golden Rule: Colostrum is Life</h2>
                 <div class="grid md:grid-cols-2 gap-6 items-center">
                     <div>
-                        <p class="text-slate-600 mb-4">Colostrum, the doe's first milk, is packed with essential antibodies that a kid's immune system cannot produce on its own. It is absolutely vital for their survival.</p>
+                        <p class="text-slate-600 mb-4"><a href="15-glossary-resources.php#colostrum" class="text-emerald-600 hover:underline font-semibold">Colostrum</a>, the doe's first milk, is packed with essential antibodies that a kid's immune system cannot produce on its own. It is absolutely vital for their survival.</p>
                         <ul class="space-y-3 list-disc list-inside text-slate-700">
                             <li><strong>Timing is Everything:</strong> A kid's gut can only absorb these large antibody molecules for the first 12-24 hours of life. They need to get colostrum as soon as possible after birth, ideally within the first hour.</li>
                             <li><strong>How Much:</strong> Aim for 10-12% of the kid's body weight in colostrum within the first 24 hours, divided into 3-4 feedings. (e.g., a 5lb kid needs about 8oz total).</li>
@@ -74,19 +74,21 @@ include __DIR__ . '/../includes/header.php';
             <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Other Early Kid Care</h2>
                 <ul class="space-y-3 list-disc list-inside text-slate-600">
-                    <li><strong>Disbudding:</strong> If you plan to prevent horn growth, it must be done by an experienced person between 7-14 days of age. This is a skilled and sensitive procedure.</li>
+                    <li><strong><a href="15-glossary-resources.php#disbudding" class="text-emerald-600 hover:underline font-semibold">Disbudding</a>:</strong> If you plan to prevent horn growth, it must be done by an experienced person between 7-14 days of age. This is a skilled and sensitive procedure.</li>
                     <li><strong>Vaccinations:</strong> Begin the CDT vaccine series around 4-6 weeks of age, following your veterinarian's schedule.</li>
-                    <li><strong>Coccidiosis Prevention:</strong> Kids are very susceptible to coccidiosis, an internal parasite that causes diarrhea (scours). Keep their environment scrupulously clean and dry. Many people use a medicated feed (coccidiostat) as a preventative measure.</li>
+                    <li><strong>Coccidiosis Prevention:</strong> Kids are very susceptible to <a href="15-glossary-resources.php#coccidiosis" class="text-emerald-600 hover:underline font-semibold">coccidiosis</a>, an internal parasite that causes diarrhea (scours). Keep their environment scrupulously clean and dry. Many people use a medicated feed (coccidiostat) as a preventative measure.</li>
                 </ul>
             </section>
             <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Understanding Milk Goiter</h2>
-                <p class="text-slate-600 mb-4">It can be alarming to find a soft, squishy, fluid-filled swelling under your kid's jaw, but in most cases, it's a harmless condition known as milk goiter.</p>
-                <ul class="space-y-3 list-disc list-inside text-slate-700">
-                    <li><strong>What it is:</strong> A temporary swelling of the thymus gland, often seen in fast-growing kids (especially bottle babies) between 2 weeks and 4 months of age.</li>
-                    <li><strong>What it isn't:</strong> It is almost never a sign of iodine deficiency. It should not be confused with "bottle jaw," which is caused by anemia from parasites and feels like thick, pitting edema. A milk goiter feels more like a water balloon.</li>
-                    <li><strong>What to do:</strong> In almost all cases, the correct action is to do nothing. The swelling will resolve on its own as the kid's growth rate levels out. Do not supplement with iodine, as this can be harmful if not needed.</li>
-                </ul>
+                <p class="text-slate-600 mb-4">New goat owners are often alarmed to find a squishy lump under the throat of a fast-growing, healthy kid. In most cases, this is a harmless condition known as milk goiter.</p>
+                <div class="prose prose-slate max-w-none">
+                    <ul class="space-y-2">
+                        <li>It is NOT a true goiter, which is caused by an iodine deficiency. Do not supplement with iodine unless directed by a vet, as you can cause iodine toxicity.</li>
+                        <li>It is thought to be an inflammation of the thymus gland, which is part of the immune system. It appears in kids between 2 weeks and 4 months of age who are growing very quickly.</li>
+                        <li>The lump feels soft and fluid-filled and will eventually disappear on its own as the kid matures. As long as the kid is otherwise healthy, active, and eating well, a milk goiter is not a cause for concern.</li>
+                    </ul>
+                </div>
             </section>
         </div>
         <div class="flex justify-between items-center pt-12">

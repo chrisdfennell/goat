@@ -75,6 +75,28 @@ include __DIR__ . '/../includes/header.php';
             <p class="text-xs text-slate-500 mt-4 no-print">Data is saved automatically to this device's browser. Use 'Reset' to clear it.</p>
         </section>
         <div class="space-y-8">
+             <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200 printable-card">
+                <h2 class="text-2xl font-bold text-center text-slate-900 mb-4 uppercase">Meet the Goats</h2>
+                <p class="text-center text-sm text-slate-500 mb-4">Add photos and details for farm sitters or visitors.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                    <!-- Goat 1 -->
+                    <div class="bg-slate-50 p-3 rounded-lg flex flex-col items-center">
+                        <div class="w-32 h-32 bg-slate-200 rounded-full mb-3 flex items-center justify-center text-slate-400 no-print">
+                            <p class="text-xs text-center">Your Photo Here</p>
+                        </div>
+                        <strong class="block text-slate-800 text-lg" contenteditable="true" data-key="goat1-name">Goat Name</strong>
+                        <div class="text-center mt-1" contenteditable="true" data-key="goat1-details">Breed, DOB, and identifying marks.</div>
+                    </div>
+                    <!-- Goat 2 -->
+                    <div class="bg-slate-50 p-3 rounded-lg flex flex-col items-center">
+                        <div class="w-32 h-32 bg-slate-200 rounded-full mb-3 flex items-center justify-center text-slate-400 no-print">
+                             <p class="text-xs text-center">Your Photo Here</p>
+                        </div>
+                        <strong class="block text-slate-800 text-lg" contenteditable="true" data-key="goat2-name">Goat Name</strong>
+                        <div class="text-center mt-1" contenteditable="true" data-key="goat2-details">Breed, DOB, and identifying marks.</div>
+                    </div>
+                </div>
+            </section>
             <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200 printable-card">
                 <h2 class="text-2xl font-bold text-center text-slate-900 mb-4 uppercase">Emergency Contacts</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm" data-key="emergency-contacts">
@@ -120,13 +142,29 @@ include __DIR__ . '/../includes/header.php';
                                 <td class="p-3">20 - 40 breaths/min</td>
                             </tr>
                             <tr>
-                                <td class="p-3 font-medium">Rumen Contractions</td>
+                                <td class="p-3 font-medium"><a href="15-glossary-resources.php#rumen" class="text-emerald-600 hover:underline font-semibold">Rumen</a> Contractions</td>
                                 <td class="p-3">1 - 3 per minute</td>
                                 <td class="p-3">N/A</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
+            </section>
+             <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200 printable-card">
+                <h2 class="text-2xl font-bold text-center text-slate-900 mb-4 uppercase">Common Plants Poisonous to Goats</h2>
+                <p class="text-center text-sm text-slate-500 mb-4">This is not a complete list. When in doubt, assume a plant is toxic. Goats are especially vulnerable to ornamental shrubs.</p>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center font-medium text-red-700">
+                   <p>Azalea</p>
+                   <p>Rhododendron</p>
+                   <p>Yew</p>
+                   <p>Oleander</p>
+                   <p>Lantana</p>
+                   <p>Milkweed</p>
+                   <p>Bracken Fern</p>
+                   <p>Lily of the Valley</p>
+                   <p>Wilted Cherry/Plum Leaves</p>
+                </div>
+                 <p class="text-center text-xs text-slate-500 mt-4">Symptoms of poisoning can include foaming at the mouth, staggering, crying, vomiting, and bloat. Call a vet immediately if you suspect poisoning.</p>
             </section>
             <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200 printable-card">
                 <div class="flex justify-between items-center mb-4">
@@ -146,28 +184,10 @@ include __DIR__ . '/../includes/header.php';
                         </thead>
                         <tbody class="divide-y divide-slate-200" contenteditable="true" data-key="feed-chart" id="feed-chart-body">
                             <tr>
-                                <td class="p-3 h-10"></td>
-                                <td class="p-3"></td>
-                                <td class="p-3"></td>
-                                <td class="p-3"></td>
+                                <td class="p-3 h-10"></td><td class="p-3"></td><td class="p-3"></td><td class="p-3"></td>
                             </tr>
                             <tr>
-                                <td class="p-3 h-10"></td>
-                                <td class="p-3"></td>
-                                <td class="p-3"></td>
-                                <td class="p-3"></td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 h-10"></td>
-                                <td class="p-3"></td>
-                                <td class="p-3"></td>
-                                <td class="p-3"></td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 h-10"></td>
-                                <td class="p-3"></td>
-                                <td class="p-3"></td>
-                                <td class="p-3"></td>
+                                <td class="p-3 h-10"></td><td class="p-3"></td><td class="p-3"></td><td class="p-3"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -192,32 +212,10 @@ include __DIR__ . '/../includes/header.php';
                         </thead>
                         <tbody class="divide-y divide-slate-200" contenteditable="true" data-key="withdrawal-chart" id="withdrawal-chart-body">
                             <tr>
-                                <td class="p-3 h-10"></td>
-                                <td class="p-3"></td>
-                                <td class="p-3"></td>
-                                <td class="p-3"></td>
-                                <td class="p-3"></td>
+                                <td class="p-3 h-10"></td><td class="p-3"></td><td class="p-3"></td><td class="p-3"></td><td class="p-3"></td>
                             </tr>
-                            <tr>
-                                <td class="p-3 h-10"></td>
-                                <td class="p-3"></td>
-                                <td class="p-3"></td>
-                                <td class="p-3"></td>
-                                <td class="p-3"></td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 h-10"></td>
-                                <td class="p-3"></td>
-                                <td class="p-3"></td>
-                                <td class="p-3"></td>
-                                <td class="p-3"></td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 h-10"></td>
-                                <td class="p-3"></td>
-                                <td class="p-3"></td>
-                                <td class="p-3"></td>
-                                <td class="p-3"></td>
+                             <tr>
+                                <td class="p-3 h-10"></td><td class="p-3"></td><td class="p-3"></td><td class="p-3"></td><td class="p-3"></td>
                             </tr>
                         </tbody>
                     </table>

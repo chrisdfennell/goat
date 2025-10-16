@@ -1,11 +1,7 @@
 <?php
 $PAGE_TITLE = 'Getting Started • Goat Care Guide';
 $PAGE_SCRIPTS = ['https://cdn.tailwindcss.com'];
-$PAGE_INLINE_JS = <<<HTML
-<script>
-
-</script>
-HTML;
+$PAGE_INLINE_JS = ''; // No page-specific JS needed now
 include __DIR__ . '/../includes/header.php';
 ?>
 
@@ -23,15 +19,7 @@ include __DIR__ . '/../includes/header.php';
                     <li><strong>Zoning &amp; Ordinances:</strong> Check your local town or county laws. Are livestock permitted on your property size? Are there restrictions on animal numbers, structures, or setbacks from property lines?</li>
                     <li><strong>Talk to Your Neighbors:</strong> Let your direct neighbors know your plans. Explain your fencing and security measures. A friendly heads-up can prevent future conflicts.</li>
                     <li><strong>Find a Vet:</strong> Locate a large-animal or livestock veterinarian who treats goats *before* you need one. Ask if they do farm calls. This is a critical step many beginners forget.</li>
-                </ul>
-            </section>
-            <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
-                <h2 class="text-2xl font-bold text-slate-900 mb-4">Goat-Proof Your Property</h2>
-                <p class="text-slate-600 mb-4">Goats are browsers, which means they prefer to eat trees and bushes, and they explore the world with their mouths. While they don't eat tin cans, they will "taste" almost anything out of curiosity, which can be dangerous.</p>
-                <ul class="space-y-3 list-disc list-inside text-slate-700">
-                    <li><strong>Electrical Dangers:</strong> Ensure any and all electrical cords in or near their enclosure are completely out of reach. A curious chew can lead to electrocution.</li>
-                    <li><strong>Plastic & Paper:</strong> Goats have been known to eat plastic bags, which can cause a fatal digestive obstruction. They also love to eat paper, so keep it secured.</li>
-                    <li><strong>Toxic Plants:</strong> Walk your property and identify any plants that are toxic to goats. Pay special attention to common ornamental shrubs like azaleas, rhododendrons, and yews.</li>
+                    <li><strong>Goat-Proof Your Property:</strong> Goats are curious and will taste everything. Ensure there are no electrical cords they can chew on, plastic bags they could ingest, or poisonous ornamental plants (like azaleas or rhododendrons) within their reach.</li>
                 </ul>
             </section>
             <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
@@ -40,8 +28,8 @@ include __DIR__ . '/../includes/header.php';
                     <div>
                         <p class="text-slate-600 mb-4">The golden rule is to <strong>never get a single goat</strong>. They are intensely social herd animals and will be stressed and destructive if kept alone.</p>
                         <ul class="space-y-2 list-disc list-inside text-slate-700">
-                            <li><strong>Ideal Start:</strong> Two or three does (females) or two wethers (castrated males) make an excellent starter herd.</li>
-                            <li><strong>Avoid Bucks:</strong> Do not get an intact buck (male) at first. They have a strong odor, require very robust fencing, and can be aggressive. Use a "stud service" from a local breeder for your does.</li>
+                            <li><strong>Ideal Start:</strong> Two or three <a href="15-glossary-resources.php#doe" class="text-emerald-600 hover:underline font-semibold">does</a> (females) or two <a href="15-glossary-resources.php#wether" class="text-emerald-600 hover:underline font-semibold">wethers</a> (castrated males) make an excellent starter herd.</li>
+                            <li><strong>Avoid Bucks:</strong> Do not get an intact <a href="15-glossary-resources.php#buck" class="text-emerald-600 hover:underline font-semibold">buck</a> (male) at first. They have a strong odor, require very robust fencing, and can be aggressive. Use a "stud service" from a local breeder for your does.</li>
                         </ul>
                     </div>
                     <div>
@@ -53,11 +41,11 @@ include __DIR__ . '/../includes/header.php';
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Questions to Ask the Breeder</h2>
                 <p class="text-slate-600 mb-4">A reputable breeder will be happy to answer your questions. Don't be shy!</p>
                 <ul class="space-y-2 list-disc list-inside text-slate-600">
-                    <li><strong>Disease Testing:</strong> Do you test your herd for CAE, CL, and Johne's disease? Can I see the most recent results? (Buying from a tested herd is the single best thing you can do for your herd's long-term health).</li>
+                    <li><strong>Disease Testing:</strong> Do you test your herd for <a href="15-glossary-resources.php#cae" class="text-emerald-600 hover:underline font-semibold">CAE</a>, <a href="15-glossary-resources.php#cl" class="text-emerald-600 hover:underline font-semibold">CL</a>, and <a href="15-glossary-resources.php#johnes" class="text-emerald-600 hover:underline font-semibold">Johne's disease</a>? Can I see the most recent results? (Buying from a tested herd is the single best thing you can do for your herd's long-term health).</li>
                     <li><strong>Vaccination &amp; Deworming History:</strong> What vaccines have they had and when? What is your parasite management program?</li>
                     <li><strong>Feed:</strong> What brand of feed and type of hay are they currently eating? (Get a small bag to help transition them slowly).</li>
-                    <li><strong>Temperament:</strong> Ask to see the parents (dam and sire) if possible. A calm dam often raises calm kids.</li>
-                    <li><strong>For Bottle Babies:</strong> Ask the seller to give the kid a bottle in front of you. If the kid doesn't eagerly take the nipple and suck on its own, do not buy it. A weak or unwilling bottle-feeder is a sign of potential health issues.</li>
+                    <li><strong>Temperament:</strong> Ask to see the parents (<a href="15-glossary-resources.php#dam" class="text-emerald-600 hover:underline font-semibold">dam</a> and sire) if possible. A calm dam often raises calm kids.</li>
+                    <li><strong>For Bottle Babies:</strong> If buying a bottle-fed kid, ask the seller to demonstrate that the kid will take a bottle easily from them. A kid that is not a confident bottle-feeder can be very difficult for a beginner.</li>
                 </ul>
             </section>
         </div>
