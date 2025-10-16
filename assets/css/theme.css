@@ -1,17 +1,54 @@
-/* === Moved from original <style> blocks === */
+/*
+ * Main Theme Stylesheet
+ *
+ * Contains base styles and variables for the light/dark theme toggle.
+ */
 
 body {
-    font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
+
 .hero-bg {
-    background-image: url('https://placehold.co/1200x600/a7f3d0/1e293b?text=Welcome+Goat+Keepers!');
-    background-size: cover;
-    background-position: center;
+  background-image: url('https://placehold.co/1200x600/a7f3d0/1e293b?text=Welcome+Goat+Keepers!');
+  background-size: cover;
+  background-position: center;
 }
-/* Dark/Light variables (opt-in if you want) */
+
+/* Enable light and dark theme variants */
 :root {
-    color-scheme: light dark;
+  color-scheme: light dark;
 }
+
+/* Invert images in dark mode where specified */
 html[data-theme="dark"] .dark\:invert {
-    filter: invert(1) hue-rotate(180deg);
+  filter: invert(1) hue-rotate(180deg);
+}
+
+.lightbox-backdrop {
+    transition: opacity 0.2s ease-in-out;
+}
+
+.lightbox-backdrop.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox-frame {
+    transition: transform 0.2s ease-in-out;
+    transform: scale(0.95);
+}
+
+.lightbox-backdrop.open .lightbox-frame {
+    transform: scale(1);
+}
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    .printable-card {
+        page-break-inside: avoid;
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+    }
 }

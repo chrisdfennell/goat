@@ -1,3 +1,4 @@
-// /assets/js/homepage.js
-// Put homepage-only logic here.
+/**
+ * JavaScript for the homepage.
+ */
 console.log('Homepage JS loaded');

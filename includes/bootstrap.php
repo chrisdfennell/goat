@@ -10,8 +10,11 @@ $PAGE_SCRIPTS = $PAGE_SCRIPTS ?? [];
 $PAGE_INLINE_JS = $PAGE_INLINE_JS ?? '';
 $PAGE_FOOTER_HTML = $PAGE_FOOTER_HTML ?? '';
 
-// REL for relative linking from root vs /pages/
-$scriptDir = rtrim(str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'])), '/');
-$REL = ($scriptDir === '' || $scriptDir === '/') ? '' : '../';
+// Determine relative path for assets. This is more robust.
+$isSubPage = strpos($_SERVER['SCRIPT_NAME'], '/pages/') !== false;
+$REL = $isSubPage ? '../' : '';
 
-function e(string $s): string { return htmlspecialchars($s, ENT_QUOTES, 'UTF-8'); }
+function e(string $s): string
+{
+    return htmlspecialchars($s, ENT_QUOTES, 'UTF-8');
+}
