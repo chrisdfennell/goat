@@ -1,34 +1,34 @@
 <?php
 require_once __DIR__ . '/bootstrap.php';
-$title = !empty($PAGE_TITLE) ? ($PAGE_TITLE) : $SITE_NAME;
+$title = $PAGE_TITLE ? ($PAGE_TITLE) : $SITE_NAME;
 
-// Define navigation items for easy management, using '' for the homepage key.
+// Define navigation items for easy management
 $navItems = [
-    '' => 'Home',
-    'getting-started' => 'Getting Started',
-    'housing-fencing' => 'Housing & Fencing',
-    'breeds' => 'Breeds & Choosing',
-    'nutrition-minerals' => 'Nutrition',
+    'index.php' => 'Home',
+    '01-getting-started.php' => 'Getting Started',
+    '02-housing-fencing.php' => 'Housing & Fencing',
+    '03-breeds.php' => 'Breeds & Choosing',
+    '04-nutrition-minerals.php' => 'Nutrition',
 ];
 
 $moreNavItems = [
-    'health-vaccines-parasites' => 'Health',
-    'hoof-care-grooming' => 'Hoof Care',
-    'breeding-kidding' => 'Breeding & Kidding',
-    'bottle-feeding-kid-care' => 'Bottle Feeding & Kids',
-    'security-predator-proofing' => 'Security',
-    'behavior-training-enrichment' => 'Behavior',
-    'seasonal-care' => 'Seasonal',
-    'checklists' => 'Checklists',
-    'recordkeeping-forms' => 'Records',
-    'common-problems-triage' => 'Triage',
-    'glossary-resources' => 'Glossary',
-    'calculators' => 'Calculators',
-    'barn-pack' => 'Barn Pack',
+    '05-health-vaccines-parasites.php' => 'Health',
+    '06-hoof-care-grooming.php' => 'Hoof Care',
+    '07-breeding-kidding.php' => 'Breeding & Kidding',
+    '08-bottle-feeding-kid-care.php' => 'Bottle Feeding & Kids',
+    '09-security-predator-proofing.php' => 'Security',
+    '10-behavior-training-enrichment.php' => 'Behavior',
+    '11-seasonal-care.php' => 'Seasonal',
+    '12-checklists.php' => 'Checklists',
+    '13-recordkeeping-forms.php' => 'Records',
+    '14-common-problems-triage.php' => 'Triage',
+    '15-glossary-resources.php' => 'Glossary',
+    '16-calculators.php' => 'Calculators',
+    '17-barn-pack.php' => 'Barn Pack',
 ];
 
-// Use the $currentSlug variable from bootstrap.php, which is already calculated.
-$currentUri = $currentSlug; 
+// Determine the current page name to set the active state
+$currentPage = basename($_SERVER['SCRIPT_NAME']);
 
 ?>
 <!DOCTYPE html>
@@ -41,9 +41,9 @@ $currentUri = $currentSlug;
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/theme.css">
-    <?= !empty($EXTRA_HEAD) ? $EXTRA_HEAD : '' ?>
-    <script src="/assets/js/theme-toggle.js" defer></script>
+    <link rel="stylesheet" href="<?= e($REL) ?>assets/css/theme.css">
+    <?= $EXTRA_HEAD ?>
+    <script src="<?= e($REL) ?>assets/js/theme-toggle.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Dropdown navigation logic
@@ -92,20 +92,20 @@ $currentUri = $currentSlug;
     <header class="bg-white shadow-sm sticky top-0 z-20 no-print">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
-                <a class="flex items-center gap-3" href="/">
-                    <img alt="Goat Care Guide Logo" class="w-10 h-10" src="/assets/site/assets/logo-goat.svg" />
+                <a class="flex items-center gap-3" href="<?= e($REL) ?>index.php">
+                    <img alt="Goat Care Guide Logo" class="w-10 h-10" src="<?= e($REL) ?>assets/site/assets/logo-goat.svg" />
                     <span class="text-2xl font-bold text-slate-900 hidden sm:block">Goat Care Guide</span>
                 </a>
                 <!-- Desktop Navigation Menu -->
                 <nav class="hidden md:flex items-center whitespace-nowrap">
-                    <?php foreach ($navItems as $url => $text) :
-                        $isActive = ($currentUri === $url);
-                        $href = ($url === '') ? '/' : '/' . e($url);
+                    <?php foreach ($navItems as $file => $text) :
+                        $isActive = ($currentPage === $file);
+                        $url = ($file === 'index.php') ? e($REL . 'index.php') : e($REL . 'pages/' . $file);
                         $class = $isActive
                             ? 'px-3 py-2 text-sm font-medium bg-emerald-100 text-emerald-700 rounded-md'
                             : 'px-3 py-2 text-sm font-medium text-slate-600 hover:text-emerald-600 rounded-md';
                     ?>
-                        <a class="<?= $class ?>" href="<?= $href ?>"><?= e($text) ?></a>
+                        <a class="<?= $class ?>" href="<?= $url ?>"><?= e($text) ?></a>
                     <?php endforeach; ?>
 
                     <div class="relative">
@@ -117,14 +117,14 @@ $currentUri = $currentSlug;
                         </button>
                         <div class="hidden absolute right-0 mt-2 w-56 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-30" id="nav-dropdown-panel">
                             <div class="py-1">
-                                <?php foreach ($moreNavItems as $url => $text) :
-                                    $isActive = ($currentUri === $url);
-                                    $href = '/' . e($url);
+                                <?php foreach ($moreNavItems as $file => $text) :
+                                    $isActive = ($currentPage === $file);
+                                    $url = e($REL . 'pages/' . $file);
                                     $class = $isActive
                                         ? 'block whitespace-normal px-4 py-2 text-sm bg-emerald-100 text-emerald-700 font-medium'
                                         : 'block whitespace-normal px-4 py-2 text-sm text-slate-700 hover:bg-slate-100';
                                 ?>
-                                    <a class="<?= $class ?>" href="<?= $href ?>"><?= e($text) ?></a>
+                                    <a class="<?= $class ?>" href="<?= $url ?>"><?= e($text) ?></a>
                                 <?php endforeach; ?>
                             </div>
                         </div>
@@ -144,8 +144,8 @@ $currentUri = $currentSlug;
         <div class="hidden md:hidden fixed inset-0 bg-white z-30" id="mobile-menu-panel">
             <div class="h-full flex flex-col">
                 <div class="p-4 flex justify-between items-center border-b">
-                    <a class="flex items-center gap-3" href="/">
-                        <img alt="Goat Care Guide Logo" class="w-8 h-8" src="/assets/site/assets/logo-goat.svg" />
+                    <a class="flex items-center gap-3" href="<?= e($REL) ?>index.php">
+                        <img alt="Goat Care Guide Logo" class="w-8 h-8" src="<?= e($REL) ?>assets/site/assets/logo-goat.svg" />
                         <span class="text-xl font-bold text-slate-900">Goat Care Guide</span>
                     </a>
                     <button class="p-2 rounded-md text-slate-600 hover:text-emerald-600 hover:bg-slate-100" id="mobile-menu-close-button">
@@ -157,14 +157,14 @@ $currentUri = $currentSlug;
                 <nav class="flex-grow p-4 overflow-y-auto">
                     <?php
                     $allItems = array_merge($navItems, $moreNavItems);
-                    foreach ($allItems as $url => $text) :
-                        $isActive = ($currentUri === $url);
-                        $href = ($url === '') ? '/' : '/' . e($url);
+                    foreach ($allItems as $file => $text) :
+                        $isActive = ($currentPage === $file);
+                        $url = ($file === 'index.php') ? e($REL . 'index.php') : e($REL . 'pages/' . $file);
                         $class = $isActive
                             ? 'block px-4 py-2 text-base font-medium bg-emerald-100 text-emerald-700 rounded-md'
                             : 'block px-4 py-2 text-base font-medium text-slate-600 hover:bg-slate-100 rounded-md';
                     ?>
-                        <a class="<?= $class ?>" href="<?= $href ?>"><?= e($text) ?></a>
+                        <a class="<?= $class ?>" href="<?= $url ?>"><?= e($text) ?></a>
                     <?php endforeach; ?>
                 </nav>
             </div>
