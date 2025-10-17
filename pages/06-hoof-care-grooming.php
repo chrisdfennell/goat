@@ -26,7 +26,7 @@ include __DIR__ . '/../includes/header.php';
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">The Trimming Process: A Step-by-Step Guide</h2>
                 <div class="grid md:grid-cols-2 gap-6 items-start">
                     <div>
-                        <img alt="Diagram showing the parts of a goat's hoof" class="rounded-lg shadow-sm mb-4" src="<?= e($REL) ?>assets/site/assets/goat-hoof-anatomy.png" />
+                        <img alt="Diagram showing the parts of a goat's hoof" class="rounded-lg shadow-sm mb-4" src="/assets/site/assets/goat-hoof-anatomy.png" />
                         <h3 class="font-semibold text-slate-800">Your Toolkit:</h3>
                         <ul class="space-y-1 list-disc list-inside text-sm text-slate-600">
                             <li><strong>Hoof Trimmers/Shears:</strong> Sharp, clean, and designed for goats or sheep.</li>
@@ -41,7 +41,7 @@ include __DIR__ . '/../includes/header.php';
                             <li><strong>2. Clean the Hoof:</strong> Use a hoof pick or stiff brush to remove all dirt, mud, and manure. You need to see what you are doing.</li>
                             <li><strong>3. Trim the Hoof Wall:</strong> The outer wall of the hoof grows fastest. Carefully trim the overgrown wall down until it is level with the soft sole of the hoof. Make small, conservative cuts.</li>
                             <li><strong>4. Shape the Hoof:</strong> The goal is a flat, level bottom surface for the goat to walk on. Pare away any flaps or pockets on the sole, but be careful not to remove too much.</li>
-                            <li><strong>5. Check for Problems:</strong> As you trim, look for signs of <a href="15-glossary-resources.php#hoof-rot" class="text-emerald-600 hover:underline font-semibold">hoof rot</a> (a foul smell, black tissue), scald (redness between the toes), or abscesses.</li>
+                            <li><strong>5. Check for Problems:</strong> As you trim, look for signs of <a href="/glossary-resources#hoof-rot" class="text-emerald-600 hover:underline font-semibold">hoof rot</a> (a foul smell, black tissue), scald (redness between the toes), or abscesses.</li>
                         </ol>
                         <div class="mt-4 bg-amber-50 border-l-4 border-amber-500 text-amber-800 p-4 rounded-r-lg text-sm">
                             <strong>Tip:</strong> If you see pink when trimming the sole, STOP. That is live tissue (the "quick") and cutting it will cause pain and bleeding.
@@ -74,13 +74,13 @@ include __DIR__ . '/../includes/header.php';
             </section>
         </div>
         <div class="flex justify-between items-center pt-12">
-            <a class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-sm font-medium text-slate-700 rounded-md shadow-sm hover:bg-slate-50 transition-colors" href="05-health-vaccines-parasites.php">
+            <a class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-sm font-medium text-slate-700 rounded-md shadow-sm hover:bg-slate-50 transition-colors" href="/health-vaccines-parasites">
                 <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
                     <path d="m15 18-6-6 6-6"></path>
                 </svg>
                 Previous
             </a>
-            <a class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 border border-transparent text-sm font-medium text-white rounded-md shadow-sm hover:bg-emerald-700 transition-colors" href="07-breeding-kidding.php">
+            <a class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 border border-transparent text-sm font-medium text-white rounded-md shadow-sm hover:bg-emerald-700 transition-colors" href="/breeding-kidding">
                 Next
                 <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
                     <path d="m9 18 6-6-6-6"></path>

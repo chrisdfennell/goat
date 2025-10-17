@@ -199,8 +199,8 @@ include __DIR__ . '/../includes/header.php';
                             </tr>
                             <tr contenteditable="true"><td class="p-2 font-semibold w-1/4 bg-slate-50">Breed:</td><td class="p-2"></td></tr>
                             <tr contenteditable="true"><td class="p-2 font-semibold w-1/4 bg-slate-50">Date of Birth:</td><td class="p-2"></td></tr>
-                            <tr contenteditable="true"><td class="p-2 font-semibold w-1/4 bg-slate-50"><a href="15-glossary-resources.php#dam" class="text-emerald-600 hover:underline font-semibold">Dam</a> (Mother):</td><td class="p-2"></td></tr>
-                            <tr contenteditable="true"><td class="p-2 font-semibold w-1/4 bg-slate-50"><a href="15-glossary-resources.php#sire" class="text-emerald-600 hover:underline font-semibold">Sire</a> (Father):</td><td class="p-2"></td></tr>
+                            <tr contenteditable="true"><td class="p-2 font-semibold w-1/4 bg-slate-50"><a href="/glossary-resources#dam" class="text-emerald-600 hover:underline font-semibold">Dam</a> (Mother):</td><td class="p-2"></td></tr>
+                            <tr contenteditable="true"><td class="p-2 font-semibold w-1/4 bg-slate-50"><a href="/glossary-resources#sire" class="text-emerald-600 hover:underline font-semibold">Sire</a> (Father):</td><td class="p-2"></td></tr>
                             <tr contenteditable="true"><td class="p-2 font-semibold w-1/4 bg-slate-50">Notes (markings, etc):</td><td class="p-2"></td></tr>
                             <tr class="h-4 bg-slate-200"><td colspan="2"></td></tr>
                             <tr class="goat-record-entry divide-y divide-slate-200" contenteditable="true">
@@ -243,7 +243,7 @@ include __DIR__ . '/../includes/header.php';
                     <table class="w-full min-w-[800px] text-sm text-left" id="hoof-log-table">
                         <thead class="bg-slate-100">
                             <tr>
-                                <th class="p-2 font-semibold">Date</th><th class="p-2 font-semibold">Goat ID</th><th class="p-2 font-semibold">Hoof Trim Done?</th><th class="p-2 font-semibold"><a href="15-glossary-resources.php#famacha" class="text-emerald-600 hover:underline font-semibold">FAMACHA</a> Score</th><th class="p-2 font-semibold">Body Condition Score (1-5)</th><th class="p-2 font-semibold">Notes</th>
+                                <th class="p-2 font-semibold">Date</th><th class="p-2 font-semibold">Goat ID</th><th class="p-2 font-semibold">Hoof Trim Done?</th><th class="p-2 font-semibold"><a href="/glossary-resources#famacha" class="text-emerald-600 hover:underline font-semibold">FAMACHA</a> Score</th><th class="p-2 font-semibold">Body Condition Score (1-5)</th><th class="p-2 font-semibold">Notes</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-slate-200" contenteditable="true" data-key="hoof-log" id="hoof-log-body">
@@ -262,7 +262,7 @@ include __DIR__ . '/../includes/header.php';
                     <table class="w-full min-w-[900px] text-sm text-left" id="breed-kid-log-table">
                         <thead class="bg-slate-100">
                             <tr>
-                                <th class="p-2 font-semibold"><a href="15-glossary-resources.php#doe" class="text-emerald-600 hover:underline font-semibold">Doe</a></th><th class="p-2 font-semibold"><a href="15-glossary-resources.php#buck" class="text-emerald-600 hover:underline font-semibold">Buck</a></th><th class="p-2 font-semibold">Breeding Date</th><th class="p-2 font-semibold">Est. Due Date</th><th class="p-2 font-semibold">Actual Kidding Date</th><th class="p-2 font-semibold">Kids (M/F, Names, Weight)</th><th class="p-2 font-semibold">Notes</th>
+                                <th class="p-2 font-semibold"><a href="/glossary-resources#doe" class="text-emerald-600 hover:underline font-semibold">Doe</a></th><th class="p-2 font-semibold"><a href="/glossary-resources#buck" class="text-emerald-600 hover:underline font-semibold">Buck</a></th><th class="p-2 font-semibold">Breeding Date</th><th class="p-2 font-semibold">Est. Due Date</th><th class="p-2 font-semibold">Actual Kidding Date</th><th class="p-2 font-semibold">Kids (M/F, Names, Weight)</th><th class="p-2 font-semibold">Notes</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-slate-200" contenteditable="true" data-key="breed-kid-log" id="breed-kid-log-body">
@@ -312,13 +312,13 @@ include __DIR__ . '/../includes/header.php';
             </section>
         </div>
         <div class="flex justify-between items-center pt-12 no-print">
-            <a class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-sm font-medium text-slate-700 rounded-md shadow-sm hover:bg-slate-50 transition-colors" href="12-checklists.php">
+            <a class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-sm font-medium text-slate-700 rounded-md shadow-sm hover:bg-slate-50 transition-colors" href="/checklists">
                 <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
                     <path d="m15 18-6-6 6-6"></path>
                 </svg>
                 Previous
             </a>
-            <a class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 border border-transparent text-sm font-medium text-white rounded-md shadow-sm hover:bg-emerald-700 transition-colors" href="14-common-problems-triage.php">
+            <a class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 border border-transparent text-sm font-medium text-white rounded-md shadow-sm hover:bg-emerald-700 transition-colors" href="/common-problems-triage">
                 Next
                 <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
                     <path d="m9 18 6-6-6-6"></path>

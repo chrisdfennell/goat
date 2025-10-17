@@ -142,7 +142,7 @@ include __DIR__ . '/../includes/header.php';
                                 <td class="p-3">20 - 40 breaths/min</td>
                             </tr>
                             <tr>
-                                <td class="p-3 font-medium"><a href="15-glossary-resources.php#rumen" class="text-emerald-600 hover:underline font-semibold">Rumen</a> Contractions</td>
+                                <td class="p-3 font-medium"><a href="/glossary-resources#rumen" class="text-emerald-600 hover:underline font-semibold">Rumen</a> Contractions</td>
                                 <td class="p-3">1 - 3 per minute</td>
                                 <td class="p-3">N/A</td>
                             </tr>
@@ -223,13 +223,13 @@ include __DIR__ . '/../includes/header.php';
             </section>
         </div>
         <div class="flex justify-between items-center pt-12 no-print">
-            <a class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-sm font-medium text-slate-700 rounded-md shadow-sm hover:bg-slate-50 transition-colors" href="16-calculators.php">
+            <a class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-sm font-medium text-slate-700 rounded-md shadow-sm hover:bg-slate-50 transition-colors" href="/calculators">
                 <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
                     <path d="m15 18-6-6 6-6"></path>
                 </svg>
                 Previous
             </a>
-            <a class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 border border-transparent text-sm font-medium text-white rounded-md shadow-sm hover:bg-emerald-700 transition-colors" href="<?= e($REL) ?>index.php">
+            <a class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 border border-transparent text-sm font-medium text-white rounded-md shadow-sm hover:bg-emerald-700 transition-colors" href="/">
                 Back to Home
                 <svg class="rotate-180" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
                     <path d="m15 18-6-6 6-6"></path>

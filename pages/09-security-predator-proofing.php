@@ -53,7 +53,7 @@ include __DIR__ . '/../includes/header.php';
                         </ul>
                     </div>
                     <div>
-                        <img alt="A sturdy barn door with a two-step secure latch." class="rounded-lg shadow-sm" src="<?= e($REL) ?>assets/site/assets/secure-barn-door.jpg" />
+                        <img alt="A sturdy barn door with a two-step secure latch." class="rounded-lg shadow-sm" src="/assets/site/assets/secure-barn-door.jpg" />
                     </div>
                 </div>
             </section>
@@ -78,7 +78,7 @@ include __DIR__ . '/../includes/header.php';
                             <tr>
                                 <td class="p-3 font-medium">Donkey (Standard or larger)</td>
                                 <td class="p-3">Natural and aggressive hatred of canines (dogs, coyotes). Their loud bray is an excellent alarm call for the whole farm.</td>
-                                <td class="p-3">Can be overly aggressive towards newborn <a href="15-glossary-resources.php#kid" class="text-emerald-600 hover:underline font-semibold">kids</a> or even the herd's own dogs. Generally only effective against canine threats, not cougars or bears.</td>
+                                <td class="p-3">Can be overly aggressive towards newborn <a href="/glossary-resources#kid" class="text-emerald-600 hover:underline font-semibold">kids</a> or even the herd's own dogs. Generally only effective against canine threats, not cougars or bears.</td>
                             </tr>
                             <tr>
                                 <td class="p-3 font-medium">Llama</td>
@@ -101,13 +101,13 @@ include __DIR__ . '/../includes/header.php';
             </section>
         </div>
         <div class="flex justify-between items-center pt-12">
-            <a class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-sm font-medium text-slate-700 rounded-md shadow-sm hover:bg-slate-50 transition-colors" href="08-bottle-feeding-kid-care.php">
+            <a class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-sm font-medium text-slate-700 rounded-md shadow-sm hover:bg-slate-50 transition-colors" href="/bottle-feeding-kid-care">
                 <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
                     <path d="m15 18-6-6 6-6"></path>
                 </svg>
                 Previous
             </a>
-            <a class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 border border-transparent text-sm font-medium text-white rounded-md shadow-sm hover:bg-emerald-700 transition-colors" href="10-behavior-training-enrichment.php">
+            <a class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 border border-transparent text-sm font-medium text-white rounded-md shadow-sm hover:bg-emerald-700 transition-colors" href="/behavior-training-enrichment">
                 Next
                 <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
                     <path d="m9 18 6-6-6-6"></path>

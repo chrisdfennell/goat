@@ -10,12 +10,12 @@ include __DIR__ . '/../includes/header.php';
     <div class="max-w-4xl mx-auto">
         <section class="mb-12 text-center">
             <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 tracking-tight mb-4">Goat Nutrition &amp; Minerals</h1>
-            <p class="text-lg text-slate-600 max-w-3xl mx-auto">Goats are <a href="15-glossary-resources.php#rumen" class="text-emerald-600 hover:underline font-semibold">ruminants</a> with unique dietary needs. The foundation of any goat's diet is high-quality forage, supplemented by the right minerals and clean water.</p>
+            <p class="text-lg text-slate-600 max-w-3xl mx-auto">Goats are <a href="/glossary-resources#rumen" class="text-emerald-600 hover:underline font-semibold">ruminants</a> with unique dietary needs. The foundation of any goat's diet is high-quality forage, supplemented by the right minerals and clean water.</p>
         </section>
         <div class="space-y-8">
             <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Forage: The Most Important Feed</h2>
-                <p class="text-slate-600 mb-4">Goats are browsers, not grazers. This means they naturally prefer to eat woody plants, leaves, and weeds ("<a href="15-glossary-resources.php#browse" class="text-emerald-600 hover:underline font-semibold">browse</a>") rather than just grass. The bulk of their diet should be long-stem fiber.</p>
+                <p class="text-slate-600 mb-4">Goats are browsers, not grazers. This means they naturally prefer to eat woody plants, leaves, and weeds ("<a href="/glossary-resources#browse" class="text-emerald-600 hover:underline font-semibold">browse</a>") rather than just grass. The bulk of their diet should be long-stem fiber.</p>
                 <div class="grid md:grid-cols-2 gap-6 items-center">
                     <div>
                         <h3 class="font-semibold text-slate-800">Types of Hay:</h3>
@@ -27,7 +27,7 @@ include __DIR__ . '/../includes/header.php';
                         <p class="mt-4 text-sm text-slate-600">Always inspect hay for mold, dust, and moisture before feeding. Bad hay can make a goat very sick.</p>
                     </div>
                     <div>
-                        <img alt="Side-by-side comparison of green alfalfa hay and lighter grass hay" class="rounded-lg shadow-sm" src="<?= e($REL) ?>assets/site/assets/types-of-hay.jpg" />
+                        <img alt="Side-by-side comparison of green alfalfa hay and lighter grass hay" class="rounded-lg shadow-sm" src="/assets/site/assets/types-of-hay.jpg" />
                     </div>
                 </div>
             </section>
@@ -52,8 +52,8 @@ include __DIR__ . '/../includes/header.php';
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Grain &amp; Concentrates</h2>
                 <p class="text-slate-600 mb-4">Grain is a supplement, not a staple. It should be used strategically for goats with higher energy needs.</p>
                 <ul class="space-y-2 list-disc list-inside text-slate-600">
-                    <li><strong>Who needs grain?</strong> Milking <a href="15-glossary-resources.php#doe" class="text-emerald-600 hover:underline font-semibold">does</a>, pregnant does in their last 6 weeks, and growing <a href="15-glossary-resources.php#kid" class="text-emerald-600 hover:underline font-semibold">kids</a>.</li>
-                    <li><strong>Who doesn't?</strong> <a href="15-glossary-resources.php#wether" class="text-emerald-600 hover:underline font-semibold">Wethers</a>, <a href="15-glossary-resources.php#buck" class="text-emerald-600 hover:underline font-semibold">bucks</a> (outside of rut), and <a href="15-glossary-resources.php#dry-doe" class="text-emerald-600 hover:underline font-semibold">dry does</a> generally do not need grain and can become overweight and unhealthy with it.</li>
+                    <li><strong>Who needs grain?</strong> Milking <a href="/glossary-resources#doe" class="text-emerald-600 hover:underline font-semibold">does</a>, pregnant does in their last 6 weeks, and growing <a href="/glossary-resources#kid" class="text-emerald-600 hover:underline font-semibold">kids</a>.</li>
+                    <li><strong>Who doesn't?</strong> <a href="/glossary-resources#wether" class="text-emerald-600 hover:underline font-semibold">Wethers</a>, <a href="/glossary-resources#buck" class="text-emerald-600 hover:underline font-semibold">bucks</a> (outside of rut), and <a href="/glossary-resources#dry-doe" class="text-emerald-600 hover:underline font-semibold">dry does</a> generally do not need grain and can become overweight and unhealthy with it.</li>
                     <li><strong>Go Slow:</strong> Introduce or increase grain rations slowly over a week to allow the goat's rumen to adjust. Too much, too fast, can cause life-threatening acidosis.</li>
                     <li><strong>Baking Soda:</strong> Always provide free-choice baking soda. Goats will eat it to self-regulate their rumen pH and buffer against acidosis.</li>
                 </ul>
@@ -80,13 +80,13 @@ include __DIR__ . '/../includes/header.php';
             </section>
         </div>
         <div class="flex justify-between items-center pt-12">
-            <a class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-sm font-medium text-slate-700 rounded-md shadow-sm hover:bg-slate-50 transition-colors" href="03-breeds.php">
+            <a class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-sm font-medium text-slate-700 rounded-md shadow-sm hover:bg-slate-50 transition-colors" href="/breeds">
                 <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
                     <path d="m15 18-6-6 6-6"></path>
                 </svg>
                 Previous
             </a>
-            <a class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 border border-transparent text-sm font-medium text-white rounded-md shadow-sm hover:bg-emerald-700 transition-colors" href="05-health-vaccines-parasites.php">
+            <a class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 border border-transparent text-sm font-medium text-white rounded-md shadow-sm hover:bg-emerald-700 transition-colors" href="/health-vaccines-parasites">
                 Next
                 <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
                     <path d="m9 18 6-6-6-6"></path>

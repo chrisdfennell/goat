@@ -112,7 +112,7 @@ include __DIR__ . '/../includes/header.php';
                         <p class="mt-1 text-slate-600">A fatal, contagious gastrointestinal disease that causes a slow, progressive wasting away in adult goats. The bacteria is shed by infected animals long before they show symptoms, making it very difficult to control. There is no cure, so prevention relies on buying animals only from herds tested negative for the disease.</p>
                     </div>
                     <div>
-                        <h3 id="lgd"><strong class="text-slate-800">LGD:</strong> Livestock Guardian Dog, such as a Great Pyrenees or Anatolian Shepherd.</h3>
+                        <p id="lgd"><strong class="text-slate-800">LGD:</strong> Livestock Guardian Dog, such as a Great Pyrenees or Anatolian Shepherd.</p>
                     </div>
                 </div>
             </section>
@@ -128,13 +128,13 @@ include __DIR__ . '/../includes/header.php';
             </section>
         </div>
         <div class="flex justify-between items-center pt-12">
-            <a class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-sm font-medium text-slate-700 rounded-md shadow-sm hover:bg-slate-50 transition-colors" href="14-common-problems-triage.php">
+            <a class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-sm font-medium text-slate-700 rounded-md shadow-sm hover:bg-slate-50 transition-colors" href="/common-problems-triage">
                 <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
                     <path d="m15 18-6-6 6-6"></path>
                 </svg>
                 Previous
             </a>
-            <a class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 border border-transparent text-sm font-medium text-white rounded-md shadow-sm hover:bg-emerald-700 transition-colors" href="16-calculators.php">
+            <a class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 border border-transparent text-sm font-medium text-white rounded-md shadow-sm hover:bg-emerald-700 transition-colors" href="/calculators">
                 Next
                 <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
                     <path d="m9 18 6-6-6-6"></path>

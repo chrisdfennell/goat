@@ -26,7 +26,7 @@ include __DIR__ . '/../includes/header.php';
                         </ul>
                     </div>
                     <div>
-                        <img alt="The interior of a clean goat shelter with deep straw bedding" class="rounded-lg shadow-sm" src="<?= e($REL) ?>assets/site/assets/goat-shelter-interior.jpg" />
+                        <img alt="The interior of a clean goat shelter with deep straw bedding" class="rounded-lg shadow-sm" src="/assets/site/assets/goat-shelter-interior.jpg" />
                     </div>
                 </div>
             </section>
@@ -35,7 +35,7 @@ include __DIR__ . '/../includes/header.php';
                 <p class="text-slate-600 mb-4">The saying is true: if it can't hold water, it can't hold a goat. Goats are intelligent and persistent escape artists.</p>
                 <div class="grid md:grid-cols-2 gap-6 items-center">
                     <div>
-                        <img alt="A close-up of strong woven wire fencing suitable for goats" class="rounded-lg shadow-sm" src="<?= e($REL) ?>assets/site/assets/secure-goat-fence.jpg" />
+                        <img alt="A close-up of strong woven wire fencing suitable for goats" class="rounded-lg shadow-sm" src="/assets/site/assets/secure-goat-fence.jpg" />
                     </div>
                     <div>
                         <h3 class="font-semibold text-slate-800">Key Features:</h3>
@@ -70,13 +70,13 @@ include __DIR__ . '/../includes/header.php';
             </section>
         </div>
         <div class="flex justify-between items-center pt-12">
-            <a class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-sm font-medium text-slate-700 rounded-md shadow-sm hover:bg-slate-50 transition-colors" href="01-getting-started.php">
+            <a class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-sm font-medium text-slate-700 rounded-md shadow-sm hover:bg-slate-50 transition-colors" href="/getting-started">
                 <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
                     <path d="m15 18-6-6 6-6"></path>
                 </svg>
                 Previous
             </a>
-            <a class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 border border-transparent text-sm font-medium text-white rounded-md shadow-sm hover:bg-emerald-700 transition-colors" href="03-breeds.php">
+            <a class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 border border-transparent text-sm font-medium text-white rounded-md shadow-sm hover:bg-emerald-700 transition-colors" href="/breeds">
                 Next
                 <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
                     <path d="m9 18 6-6-6-6"></path>

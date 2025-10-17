@@ -149,7 +149,7 @@ include __DIR__ . '/../includes/header.php';
                     </div>
                 </div>
                  <div class="mt-6 text-sm text-slate-600 space-y-2">
-                    <p><strong>Note on Hay:</strong> This estimate assumes goats get 3-4% of their body weight in hay daily. Milkers need more energy and thus more hay. Always adjust based on your hay's quality and your goats' <a href="15-glossary-resources.php#bcs" class="text-emerald-600 hover:underline font-semibold">Body Condition Score (BCS)</a>. If they are getting too thin, increase their feed; if they are getting fat, reduce it.</p>
+                    <p><strong>Note on Hay:</strong> This estimate assumes goats get 3-4% of their body weight in hay daily. Milkers need more energy and thus more hay. Always adjust based on your hay's quality and your goats' <a href="/glossary-resources#bcs" class="text-emerald-600 hover:underline font-semibold">Body Condition Score (BCS)</a>. If they are getting too thin, increase their feed; if they are getting fat, reduce it.</p>
                     <p><strong>Note on Water:</strong> Water is the most critical nutrient. A milking doe's needs can easily double in hot weather. Always provide fresh, clean, cool water.</p>
                 </div>
             </section>
@@ -197,18 +197,18 @@ include __DIR__ . '/../includes/header.php';
                     </div>
                 </div>
                  <div class="mt-6 bg-amber-50 border-l-4 border-amber-500 text-amber-900 p-4 rounded-r-lg text-sm">
-                    <strong class="font-semibold">Disclaimer:</strong> Weight tapes and girth formulas are notoriously inaccurate for goats. They can easily be off by 20% or more depending on the goat's build, pregnancy status, or if they have a full <a href="15-glossary-resources.php#rumen" class="text-emerald-600 hover:underline font-semibold">rumen</a>. Use this only as a last resort. For accurate medication dosing, a livestock or bathroom scale is the best and safest tool.
+                    <strong class="font-semibold">Disclaimer:</strong> Weight tapes and girth formulas are notoriously inaccurate for goats. They can easily be off by 20% or more depending on the goat's build, pregnancy status, or if they have a full <a href="/glossary-resources#rumen" class="text-emerald-600 hover:underline font-semibold">rumen</a>. Use this only as a last resort. For accurate medication dosing, a livestock or bathroom scale is the best and safest tool.
                 </div>
             </section>
         </div>
         <div class="flex justify-between items-center pt-12">
-            <a class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-sm font-medium text-slate-700 rounded-md shadow-sm hover:bg-slate-50 transition-colors" href="15-glossary-resources.php">
+            <a class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-sm font-medium text-slate-700 rounded-md shadow-sm hover:bg-slate-50 transition-colors" href="/glossary-resources">
                 <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
                     <path d="m15 18-6-6 6-6"></path>
                 </svg>
                 Previous
             </a>
-            <a class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 border border-transparent text-sm font-medium text-white rounded-md shadow-sm hover:bg-emerald-700 transition-colors" href="17-barn-pack.php">
+            <a class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 border border-transparent text-sm font-medium text-white rounded-md shadow-sm hover:bg-emerald-700 transition-colors" href="/barn-pack">
                 Next
                 <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
                     <path d="m9 18 6-6-6-6"></path>

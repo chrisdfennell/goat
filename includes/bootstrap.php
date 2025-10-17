@@ -10,10 +10,14 @@ $PAGE_SCRIPTS = $PAGE_SCRIPTS ?? [];
 $PAGE_INLINE_JS = $PAGE_INLINE_JS ?? '';
 $PAGE_FOOTER_HTML = $PAGE_FOOTER_HTML ?? '';
 
-// Determine relative path for assets. This is more robust.
-$isSubPage = strpos($_SERVER['SCRIPT_NAME'], '/pages/') !== false;
-$REL = $isSubPage ? '../' : '';
+// With URL rewriting and root-relative paths, the $REL variable is no longer needed.
+// All asset paths and links will now start with "/" to be relative to the site root.
 
+/**
+ * A helper function to safely escape strings for HTML output.
+ * @param string $s The string to escape.
+ * @return string The escaped string.
+ */
 function e(string $s): string
 {
     return htmlspecialchars($s, ENT_QUOTES, 'UTF-8');
