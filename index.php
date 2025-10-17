@@ -1,12 +1,13 @@
 <?php
+// This line is critical: It loads all site configuration, including the list of pages ($PAGES).
+require_once __DIR__ . '/includes/bootstrap.php';
+
 $PAGE_TITLE = 'Goat Care: Complete Beginner’s Guide';
+$META_DESCRIPTION = 'A practical, comprehensive guide to raising healthy goats. From setup and breed selection to nutrition, health, and kidding—find clear, actionable advice for your herd.';
 $PAGE_SCRIPTS = ['https://cdn.tailwindcss.com'];
-$PAGE_INLINE_JS = <<<HTML
-<script>
+$PAGE_INLINE_JS = '';
 
-</script>
-HTML;
-
+// Now that bootstrap.php has run, the header has access to all the variables it needs.
 include __DIR__ . '/includes/header.php';
 ?>
 
@@ -43,7 +44,7 @@ include __DIR__ . '/includes/header.php';
                     <p class="mt-2 text-slate-600">Design a draft-free shelter and predator-resistant fencing with secure gates.</p>
                 </a>
                 <!-- Card: Breeds -->
-                <a class="block bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-slate-200" href="/breeds">
+                <a class="block bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-slate-200" href="/breeds-choosing">
                     <span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Breeds</span>
                     <h3 class="text-xl font-bold text-slate-900">Breeds &amp; Choosing</h3>
                     <p class="mt-2 text-slate-600">Compare dairy, meat, and pet breeds to find the right fit for your goals.</p>

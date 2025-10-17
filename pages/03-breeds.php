@@ -86,6 +86,11 @@ include __DIR__ . '/../includes/header.php';
                             <td class="p-3 text-slate-600">Growth Rate, Muscling</td>
                             <td class="p-3 text-slate-600">Boer, Kiko, Spanish</td>
                         </tr>
+                         <tr>
+                            <td class="p-3 font-medium">Fiber (Mohair/Cashmere)</td>
+                            <td class="p-3 text-slate-600">Fiber Quality, Hardiness</td>
+                            <td class="p-3 text-slate-600">Angora, Cashmere breeds</td>
+                        </tr>
                         <tr>
                             <td class="p-3 font-medium">Pets &amp; Brush Clearing</td>
                             <td class="p-3 text-slate-600">Small Size, Docile Nature, Hardiness</td>
@@ -131,6 +136,17 @@ include __DIR__ . '/../includes/header.php';
                             <td class="p-3 text-slate-600 text-sm">High-butterfat milk ("Jersey cow of goats"), handles heat well.</td>
                             <td class="p-3 text-slate-600 text-sm">Can be very loud, larger feed needs.</td>
                         </tr>
+                        <!-- Saanen -->
+                        <tr>
+                            <td class="p-3 font-medium text-slate-900 sticky left-0 bg-white">
+                                <div class="flex items-center gap-3"><img alt="Saanen goat" class="w-16 h-16 rounded-md object-cover cursor-pointer hover:opacity-80 transition-opacity" data-src="https://upload.wikimedia.org/wikipedia/commons/6/66/Saanen_Goat_in_a_pasture.jpg" onerror="this.onerror=null;this.src='https://placehold.co/80x80/e2e8f0/475569?text=Goat';" src="https://placehold.co/80x80/e2e8f0/475569?text=Goat" /><span class="font-bold">Saanen</span></div>
+                            </td>
+                            <td class="p-3 text-slate-600 text-sm">Dairy</td>
+                            <td class="p-3 text-slate-600 text-sm">140–180 lbs</td>
+                            <td class="p-3 text-slate-600 text-sm">Calm, dependable, "Steady Eddies"</td>
+                            <td class="p-3 text-slate-600 text-sm">Highest milk volume ("Holstein of goats"), generally docile.</td>
+                            <td class="p-3 text-slate-600 text-sm">Lower butterfat, pale skin is prone to sunburn.</td>
+                        </tr>
                         <!-- Alpine -->
                         <tr>
                             <td class="p-3 font-medium text-slate-900 sticky left-0 bg-white">
@@ -175,10 +191,70 @@ include __DIR__ . '/../includes/header.php';
                             <td class="p-3 text-slate-600 text-sm">Low-maintenance, parasite resistant, excellent mothers.</td>
                             <td class="p-3 text-slate-600 text-sm">Less common in some areas, less muscled than Boers.</td>
                         </tr>
+                        <!-- Pygmy -->
+                        <tr>
+                            <td class="p-3 font-medium text-slate-900 sticky left-0 bg-white">
+                                <div class="flex items-center gap-3"><img alt="Pygmy goat" class="w-16 h-16 rounded-md object-cover cursor-pointer hover:opacity-80 transition-opacity" data-src="https://upload.wikimedia.org/wikipedia/commons/b/b5/A_pygmy_goat.jpg" onerror="this.onerror=null;this.src='https://placehold.co/80x80/e2e8f0/475569?text=Goat';" src="https://placehold.co/80x80/e2e8f0/475569?text=Goat" /><span class="font-bold">Pygmy</span></div>
+                            </td>
+                            <td class="p-3 text-slate-600 text-sm">Pet / Companion</td>
+                            <td class="p-3 text-slate-600 text-sm">~60–80 lbs</td>
+                            <td class="p-3 text-slate-600 text-sm">Docile, friendly, sometimes stubborn</td>
+                            <td class="p-3 text-slate-600 text-sm">Small size makes them great pets for smaller properties. Very hardy.</td>
+                            <td class="p-3 text-slate-600 text-sm">Not a dairy breed. Prone to obesity and urinary calculi if overfed.</td>
+                        </tr>
+                        <!-- Angora -->
+                        <tr>
+                            <td class="p-3 font-medium text-slate-900 sticky left-0 bg-white">
+                                <div class="flex items-center gap-3"><img alt="Angora goat" class="w-16 h-16 rounded-md object-cover cursor-pointer hover:opacity-80 transition-opacity" data-src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Angora_Goat_Buck_in_New_Zealand.jpg" onerror="this.onerror=null;this.src='https://placehold.co/80x80/e2e8f0/475569?text=Goat';" src="https://placehold.co/80x80/e2e8f0/475569?text=Goat" /><span class="font-bold">Angora</span></div>
+                            </td>
+                            <td class="p-3 text-slate-600 text-sm">Fiber (Mohair)</td>
+                            <td class="p-3 text-slate-600 text-sm">80–120 lbs</td>
+                            <td class="p-3 text-slate-600 text-sm">Gentle, calm, somewhat delicate</td>
+                            <td class="p-3 text-slate-600 text-sm">Producing luxurious mohair fiber for spinning and crafts.</td>
+                            <td class="p-3 text-slate-600 text-sm">More susceptible to cold/wet weather after shearing and high parasite loads.</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
         </section>
+
+        <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200 mb-12">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">Registered vs. Unregistered</h2>
+            <p class="text-slate-600 mb-4">When you start looking for goats, you'll see them advertised as "registered" or "unregistered." This refers to whether they have registration papers from a breed association like the ADGA (American Dairy Goat Association) or AGS (American Goat Society).</p>
+            <div class="grid md:grid-cols-2 gap-6 text-sm">
+                <div>
+                    <h3 class="font-semibold text-lg text-slate-800">Registered Goats</h3>
+                    <ul class="mt-2 space-y-2 list-disc list-inside text-slate-700">
+                        <li><strong>Known Lineage:</strong> Registration provides a pedigree, so you know the goat's parentage. This is crucial for managing genetics and avoiding inbreeding.</li>
+                        <li><strong>Performance Programs:</strong> Registered animals can participate in programs like milk testing (DHIR) and conformation shows, which provide objective data about their quality.</li>
+                        <li><strong>Higher Value:</strong> Registered goats and their offspring command higher prices. This is essential if you plan to breed and sell.</li>
+                        <li><strong>Who needs them:</strong> Anyone serious about breeding, showing, or improving a specific breed.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg text-slate-800">Unregistered Goats</h3>
+                    <ul class="mt-2 space-y-2 list-disc list-inside text-slate-700">
+                        <li><strong>Unknown Background:</strong> You have no official record of their breeding or genetic history.</li>
+                        <li><strong>Lower Cost:</strong> They are typically much less expensive to purchase.</li>
+                        <li><strong>Perfectly Fine For...:</strong> Pets, brush clearing, and sometimes home milk production if the goat comes from a healthy, productive (but unregistered) herd.</li>
+                        <li><strong>The Risk:</strong> Without papers, claims about breed or parentage are just the seller's word. Always judge the animal based on its own health and conformation.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200 mb-12">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">What to Look For: Conformation Basics</h2>
+            <p class="text-slate-600 mb-4">Regardless of breed or registration status, every goat should have sound conformation (physical structure) for a long, healthy life. Here are a few key things to check for when evaluating a goat to buy.</p>
+            <ul class="space-y-3 list-disc list-inside text-slate-700">
+                <li><strong>Feet &amp; Legs:</strong> Look for strong, straight legs when viewed from the front and rear. Pasterns (the "ankles") should be short, strong, and upright. Avoid goats with weak or dropped pasterns.</li>
+                <li><strong>Topline:</strong> The goat's back should be long, wide, and relatively straight and level from the withers to the hips.</li>
+                <li><strong>Body Capacity:</strong> The goat should have a deep, wide chest and a well-sprung rib cage. This indicates plenty of room for the heart, lungs, and rumen to function.</li>
+                <li><strong>For Dairy Does:</strong> The udder should be high and tight, not low-hanging. The teats should be a reasonable size for milking and point slightly forward and down.</li>
+                <li><strong>General Health:</strong> Always look for bright, clear eyes; a clean, glossy coat; and an alert, active demeanor.</li>
+            </ul>
+        </section>
+
         <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
             <h2 class="text-2xl font-bold text-slate-900 mb-4">Where to Find Your Goats</h2>
             <p class="text-slate-600 mb-4">Once you know what breed you want, the next step is finding healthy animals from a reliable source. Here are the most common options:</p>

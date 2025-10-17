@@ -1,5 +1,6 @@
 <?php
 $PAGE_TITLE = 'Housing & Fencing • Goat Care Guide';
+$META_DESCRIPTION = 'Shelter size, bedding, ventilation, and fencing that actually keeps goats in (and predators out). Practical layouts and material options.';
 $PAGE_SCRIPTS = ['https://cdn.tailwindcss.com'];
 $PAGE_INLINE_JS = ''; // No page-specific JS needed now
 include __DIR__ . '/../includes/header.php';

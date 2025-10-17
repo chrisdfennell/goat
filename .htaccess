@@ -1,37 +1,34 @@
-# Disable Apache's content negotiation to prevent conflicts with clean URLs
+# Disable Apache content negotiation (prevents conflicts with clean URLs)
 Options -MultiViews
 
-# Enable the URL rewriting engine
 RewriteEngine On
+RewriteBase /
 
-# Redirect requests for the literal /index.php to the root domain for SEO
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/index\.php [NC]
+# 301 redirect /index.php → /
+RewriteCond %{THE_REQUEST} \s/index\.php[\s?] [NC]
 RewriteRule ^index\.php$ / [R=301,L]
 
-# If the request is for an existing file or directory, don't apply the rewrite rules
+# 301 redirect /sitemap.php → /sitemap.xml (only on *direct* requests)
+RewriteCond %{THE_REQUEST} \s/sitemap\.php[\s?] [NC]
+RewriteRule ^sitemap\.php$ sitemap.xml [R=301,L]
+
+# Serve real files/dirs directly
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# --- Rewrite Rules for Pretty URLs ---
-# This section internally forwards the clean URL to the actual PHP file.
-RewriteRule ^getting-started/?$ /pages/01-getting-started.php [L]
-RewriteRule ^housing-fencing/?$ /pages/02-housing-fencing.php [L]
-RewriteRule ^breeds/?$ /pages/03-breeds.php [L]
-RewriteRule ^nutrition-minerals/?$ /pages/04-nutrition-minerals.php [L]
-RewriteRule ^health-vaccines-parasites/?$ /pages/05-health-vaccines-parasites.php [L]
-RewriteRule ^hoof-care-grooming/?$ /pages/06-hoof-care-grooming.php [L]
-RewriteRule ^breeding-kidding/?$ /pages/07-breeding-kidding.php [L]
-RewriteRule ^bottle-feeding-kid-care/?$ /pages/08-bottle-feeding-kid-care.php [L]
-RewriteRule ^security-predator-proofing/?$ /pages/09-security-predator-proofing.php [L]
-RewriteRule ^behavior-training-enrichment/?$ /pages/10-behavior-training-enrichment.php [L]
-RewriteRule ^seasonal-care/?$ /pages/11-seasonal-care.php [L]
-RewriteRule ^checklists/?$ /pages/12-checklists.php [L]
-RewriteRule ^recordkeeping-forms/?$ /pages/13-recordkeeping-forms.php [L]
-RewriteRule ^common-problems-triage/?$ /pages/14-common-problems-triage.php [L]
-RewriteRule ^glossary-resources/?$ /pages/15-glossary-resources.php [L]
-RewriteRule ^calculators/?$ /pages/16-calculators.php [L]
-RewriteRule ^barn-pack/?$ /pages/17-barn-pack.php [L]
+# Exclude static/secure dirs
+RewriteRule ^assets/ - [L]
+RewriteRule ^includes/ - [L]
 
-# Handle requests for the root of the site
-RewriteRule ^/?$ /index.php [L]
+# INTERNAL rewrite: pretty /sitemap.xml uses sitemap.php (no physical XML file)
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+# Redirect direct access to numbered page files → pretty URL
+RewriteRule ^pages/([0-9]+)-(.*)\.php$ /$2 [R=301,L]
+
+# Home
+RewriteRule ^$ index.php [L]
+
+# Catch-all router → pages.php
+RewriteRule ^(.+?)/?$ pages.php?slug=$1 [QSA,L]

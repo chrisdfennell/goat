@@ -24,6 +24,31 @@ include __DIR__ . '/../includes/header.php';
                     <li><strong>Playful Nature:</strong> Goats, especially kids, love to run, jump, and play "king of the mountain." This is normal and healthy behavior.</li>
                 </ul>
             </section>
+
+            <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Decoding Goat Language</h2>
+                <p class="text-slate-600 mb-4">Goats communicate through a combination of sounds and body language. Learning to read these signals will give you invaluable insight into your herd's well-being.</p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="font-semibold text-lg text-slate-800 mb-2">Vocalizations:</h3>
+                        <ul class="space-y-3 list-disc list-inside text-slate-700">
+                            <li><strong>Bleating:</strong> The all-purpose goat sound. A doe and kid use soft bleats to find each other. A loud, insistent bleat might mean "I'm hungry," "I'm lonely," or "You're late with dinner!"</li>
+                            <li><strong>Rumbling/Growling:</strong> A low, guttural sound made by bucks in rut. It's a key part of their courtship behavior. Does will sometimes make a similar, softer sound to their newborns.</li>
+                            <li><strong>Sneezing/Snorting:</strong> Often an alert signal. If one goat snorts, the whole herd will stop and look in the direction the first goat was facing. It can also be a sign of irritation or simply clearing dust from their nose.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-slate-800 mb-2">Body Language:</h3>
+                        <ul class="space-y-3 list-disc list-inside text-slate-700">
+                            <li><strong>Tail Up:</strong> A happy, confident goat will often carry its tail flagged high like a deer.</li>
+                            <li><strong>Tail Down or Tucked:</strong> A sign of fear, stress, or illness. If a normally happy goat has its tail tucked, it's time for a closer look.</li>
+                            <li><strong>Stomping:</strong> A goat will stomp a front foot when it's annoyed or feeling threatened. It's a warning that says, "Back off!"</li>
+                            <li><strong>Hair Raised:</strong> The hair along a goat's spine (the dorsal stripe) will stand on end when they are scared or aggressive, making them look bigger.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
             <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Enrichment: A Happy Goat is a Good Goat</h2>
                 <p class="text-slate-600 mb-4">Enrichment prevents boredom, which in turn prevents bad habits like fence-chewing or bullying.</p>
@@ -37,19 +62,31 @@ include __DIR__ . '/../includes/header.php';
                         </ul>
                     </div>
                     <div>
+                        
                         <img alt="Goats climbing and playing on a multi-level wooden structure." class="rounded-lg shadow-sm" src="/assets/site/assets/goat-playground.jpg" />
                     </div>
                 </div>
             </section>
+            
             <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Basic Training</h2>
                 <p class="text-slate-600 mb-4">A little training makes handling your goats for health checks and hoof trimming much easier and less stressful for everyone.</p>
                 <ul class="space-y-3 list-disc list-inside text-slate-600">
                     <li><strong>Lead Training:</strong> Get your goats used to wearing a collar from a young age. Start by leading them short distances with a leash, using small treats like sunflower seeds as a reward. Keep sessions short and positive.</li>
-                    <li><strong>Training for the Milk Stand:</strong> Even if you don't have dairy goats, training them to hop onto a stand and eat a small treat is invaluable for hoof trimming and vet checks.</li>
-                    <li><strong>Dealing with Head-Butting:</strong> A goat that head-butts people can be dangerous. Never play head-butting games with them, especially when they are young and cute. A firm "No!" and a quick, surprising squirt from a water bottle can deter this behavior.</li>
+                    <li><strong>Training for the Milk Stand:</strong> Even if you don't have dairy goats, training them to hop onto a stand and eat a small treat is invaluable for hoof trimming and vet checks. Lure them onto the stand with their favorite treat and reward them once all four feet are on it. Gradually increase the time they stay on the stand.</li>
+                    <li><strong>Clicker Training:</strong> Goats are smart enough for clicker training! Charge the clicker by clicking and immediately giving a treat, repeated many times. Soon, the goat will associate the "click" with a reward. You can then use the clicker to mark desired behaviors (like lifting a hoof) and build more complex trained actions.</li>
                 </ul>
             </section>
+
+            <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Addressing Problem Behaviors</h2>
+                 <ul class="space-y-4 list-disc list-inside text-slate-700">
+                    <li><strong>Jumping on People:</strong> While cute in a kid, this is dangerous in an adult goat. Never encourage it. When a goat jumps up, firmly say "No!" and either turn your back on them or gently but firmly push them down. A quick, surprising squirt from a water bottle can also be an effective deterrent.</li>
+                    <li><strong>Pushiness/Head-Butting:</strong> A goat that pushes or head-butts people is showing dominance and can be dangerous. Never play head-butting games. The best correction is to carry a "bully stick" (like a short piece of PVC pipe). When the goat lowers its head to butt you, give it a firm but not harmful tap on the side of the neck or cheek. This mimics how a dominant goat would correct a subordinate and re-establishes your position as the herd leader.</li>
+                    <li><strong>Fence Testing:</strong> A bored goat will test fences. This is often a sign they need more enrichment. Ensure your fences are properly electrified if they are electric. For woven wire, make sure it is tight and free of anything they can stand on to gain height. Providing more browse or toys can often solve this problem.</li>
+                </ul>
+            </section>
+            
             <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Taming & Building Trust</h2>
                 <p class="text-slate-600 mb-4">Working with a shy or flighty goat requires patience and an understanding of their prey-animal mindset. The goal is to teach them that you are not a threat. Never chase a goat; this only confirms their fear.</p>

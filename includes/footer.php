@@ -5,6 +5,13 @@
  * Closes the main HTML structure and injects page-specific scripts.
  */
 ?>
+
+<?php
+// Prevent duplicate footer rendering if included more than once
+if (defined('LAYOUT_FOOTER_DONE')) { return; }
+define('LAYOUT_FOOTER_DONE', true);
+?>
+
 <footer class="bg-slate-100 border-t border-slate-200 mt-16">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm text-slate-500">
         <p>Last content update: 2025-10-15</p>
